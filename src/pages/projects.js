@@ -2,12 +2,14 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
+import SEO from "../components/seo"
 
 import './projects.css'
 
 export default ({ data }) => {
     return (
         <Layout>
+            <SEO title="Projects" />
             <div class="grid grid-cols-2 gap-6 pr-6 mb-6">
                 {data.allMarkdownRemark.edges.map(({ node }) => (
                     <div key={node.id} class="project-box">

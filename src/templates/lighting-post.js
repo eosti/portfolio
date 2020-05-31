@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
+import SEO from "../components/seo"
 
 import "./lighting-post.css"
 
@@ -8,6 +9,7 @@ export default ({data}) => {
   const post = data.markdownRemark
   return (
     <Layout>
+        <SEO title={post.frontmatter.title} />
         <div class="blog-content mr-4">
             <div class="show-info">
                 <p><span class="show-name">{post.frontmatter.title}</span>, {post.frontmatter.date}</p>

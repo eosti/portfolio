@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { graphql, Link } from "gatsby"
+import SEO from "../components/seo"
 
 import "./project-post.css"
 
@@ -8,6 +9,7 @@ export default ({data}) => {
     const post = data.markdownRemark
     return (
         <Layout>
+            <SEO title={post.frontmatter.title} />
             <div class="text-center mt-24">
                 <h1 class="project-title font-bold mb-1">{post.frontmatter.title}</h1>
                 <h3 class="mb-2 project-tagline">{post.frontmatter.tagline}</h3>

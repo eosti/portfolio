@@ -2,12 +2,14 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
+import SEO from "../components/seo"
 
 import './lighting.css'
 
 export default ({ data }) => {
     return (
         <Layout>
+            <SEO title="Lighting Design" />
             <div>
                 <ul class="mr-4">
                 {data.allMarkdownRemark.edges.map(({ node }) => (

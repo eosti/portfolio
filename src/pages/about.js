@@ -2,12 +2,14 @@ import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
+import SEO from "../components/seo"
 
 import './lighting.css'
 
 export default ({ data  }) => {
     return (
         <Layout>
+            <SEO title="About" />
             <div class="flex flex-col justify-center text-left align-center m-auto ml-64 h-screen">
                 <h1>About</h1>
                 <h4 class="mb-4">Lighting</h4>
