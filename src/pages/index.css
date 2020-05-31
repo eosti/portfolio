@@ -1,0 +1,48 @@
+.intro h1 {
+    font-size: 500%;
+}
+
+.intro-subtext h2 {
+    font-size: 200%; 
+    font-weight: lighter;
+}
+
+.recent-list {
+    padding-top: 5vh;
+}
+.recent-box {
+    overflow: hidden;
+    max-height:25vh;
+    margin: 5px;
+}
+
+.recent-box a {
+    text-decoration: none;
+    height: 100%;
+}
+
+.recent-image {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.recent-image img {
+    top: 50%;
+    position: absolute;
+    margin-top: -100px;
+}
+
+.recent-name {
+    top: -25vh;
+}
+
+.recent-title {
+    font-size: 200%;
+    font-weight: bolder;
+    color: #404040;
+    white-space: nowrap;
+    text-align: center;
+    margin-bottom: 0px;
+}

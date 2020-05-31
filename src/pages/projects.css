@@ -1,0 +1,38 @@
+* { margin:0; padding:0; }
+
+.project-box {
+    max-height: 45vh;
+    overflow: hidden;
+}
+
+.project-box a {
+    text-decoration:none;
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.project-name {
+    top: -45vh;
+}
+
+.project-title {
+    font-size: 300%;
+    font-weight: bolder;
+    color: #404040;
+    white-space: nowrap;
+    text-align: center;
+
+}
+
+.project-tagline {
+    font-size: 150%;
+    font-weight: bolder;
+    color: #404040;
+    white-space: nowrap;
+    text-align: center;
+}

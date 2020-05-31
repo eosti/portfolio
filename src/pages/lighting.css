@@ -1,0 +1,23 @@
+* { margin:0; padding:0; }
+
+.show-box {
+    height: 35vh;
+}
+
+
+.show-image img {
+    top: 50%;
+    margin-top: -300px;
+    position: absolute;
+}
+
+.show-title {
+    font-weight: bolder;
+    font-size: 250%;
+    margin: auto;
+    text-align: center;
+    color: #404040; 
+    height: 35vh;
+    line-height: 35vh;
+    white-space: nowrap;
+}
