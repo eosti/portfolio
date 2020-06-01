@@ -4,6 +4,7 @@ module.exports = {
         portfolioName: `Reid Sox-Harris`,
         description: `Reid Sox-Harris' Portfolio`,
         author: `@eosti`,
+        siteUrl: `https://reidsoxharris.me`,
     },
     plugins: [
         {
