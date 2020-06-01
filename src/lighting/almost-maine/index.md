@@ -1,6 +1,6 @@
 ---
 title: Almost Maine
-featuredImage: AlmostMaine_081.jpg
+featuredImage: featuredImage.jpg
 date: 2019-11
 director: Kathleen Woods
 author: John Cariani

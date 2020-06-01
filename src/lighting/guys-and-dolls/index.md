@@ -9,8 +9,8 @@ location: Palo Alto High School (Palo Alto, CA)
 ---
 
 ![](./GuysAndDolls-245.jpg)
-![](./GuysandDolls-320.jpg)
+![](./GuysAndDolls-320.jpg)
 ![](./GuysAndDolls-0162.jpg)
-![](./GuysandDolls-209.jpg)
+![](./GuysAndDolls-209.jpg)
 ![](./GuysAndDolls-0159.jpg)
-![](./GuysandDolls-0110.jpg)
+![](./GuysAndDolls-0110.jpg)

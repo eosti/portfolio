@@ -9,6 +9,7 @@ import './projects.css'
 export default ({ data }) => {
     return (
         <Layout>
+            <h2>Hey! I haven't actually posted anything here yet. I wanted to get the site out for stage tech portfolios. Check back soon.</h2>
             <SEO title="Projects" />
             <div class="grid grid-cols-2 gap-6 pr-6 mb-6">
                 {data.allMarkdownRemark.edges.map(({ node }) => (

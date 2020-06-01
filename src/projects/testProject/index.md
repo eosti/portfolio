@@ -1,9 +1,9 @@
 ---
-title: My Test Project
+title: A Wonderful Placeholder
 slug: /project/testProject
 tagline: Obviously a placeholder.
 featuredImage: ./sparks.jpg
-date: 2020-01
+date: 2018-12
 ---
 
 Spicy jalapeno bacon ipsum dolor amet sint bacon nisi, landjaeger eu andouille tri-tip cupidatat velit sed veniam pancetta lorem voluptate. In enim swine, sirloin hamburger cillum ullamco pork belly alcatra. Chicken ribeye reprehenderit beef ribs. Sed cupim flank short loin cupidatat. Adipisicing minim porchetta sint pork chop. Dolor pastrami deserunt beef irure.

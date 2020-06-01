@@ -1,9 +1,9 @@
 ---
-title: My Test Project 2
+title: Also a Placeholder!
 slug: /project/project2
 tagline: better than yours.
 featuredImage: ./sparks.jpg
-date: 2020-01
+date: 2019-05
 github: https://github.com
 buildguide: ./build
 ---

@@ -1,6 +1,6 @@
 ---
 title: Miracle Worker
-featuredImage: MiracleWorker1.jpg
+featuredImage: featuredImage.jpg
 date: 2017-09
 director: Tanna Herr and Tony Kienitz
 author: William Gibson

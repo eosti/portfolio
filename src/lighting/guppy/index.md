@@ -1,6 +1,6 @@
 ---
 title: Guppy
-featuredImage: Guppy_404.jpg
+featuredImage: featuredImage.jpg
 date: 2019-07
 director: Tanna Herr and Tony Kienitz
 author: Tony Kienitz
