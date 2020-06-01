@@ -14,6 +14,7 @@
     overflow: hidden;
     max-height:25vh;
     margin: 5px;
+    height: 100%;
 }
 
 .recent-box a {

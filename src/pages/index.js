@@ -27,7 +27,7 @@ export default ({ data }) => {
                     <div class="recent-list grid grid-cols-2">
                         {data.allMarkdownRemark.edges.map(({ node }) => 
                         <div key={node.id} class="recent-box">
-                            <Link to={node.fields.slug}>
+                            <Link class="h-full" to={node.fields.slug}>
                                 <div class="recent-image">
                                     <Img class="" imgStyle={{ objectFit: 'none' }} fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
                                 </div>

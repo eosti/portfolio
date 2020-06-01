@@ -28,9 +28,14 @@ module.exports = {
                 path: `${__dirname}/src/`,
             },
         },
+        {
+            resolve: `gatsby-plugin-postcss`,
+            options: {
+                postCssPlugins: [require('postcss-import'), require("tailwindcss"), require("autoprefixer")],
+            },
+        },
         `gatsby-plugin-robots-txt`,
         `gatsby-plugin-sitemap`,
-        `gatsby-plugin-postcss`,
         `gatsby-plugin-react-helmet`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,

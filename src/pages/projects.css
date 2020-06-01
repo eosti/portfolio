@@ -2,6 +2,7 @@
 
 .project-box {
     max-height: 45vh;
+    height: 100%;
     overflow: hidden;
 }
 
