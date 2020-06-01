@@ -1,7 +1,9 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
 import "./sidebar.css"
+import logo from "../images/reid-logo.png"
 
 export default ({ children }) => {
     const data = useStaticQuery(
@@ -18,6 +20,7 @@ export default ({ children }) => {
 
     return (
         <nav class="inline-block fixed align-middle">
+            <img class="logo-image" src={logo} />
             <ul class="list-none p-0">
                 <li>
                     <Link to="/" class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700">
