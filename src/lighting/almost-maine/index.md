@@ -1,5 +1,5 @@
 ---
-title: Almost Maine
+title: Almost, Maine
 featuredImage: featuredImage.jpg
 date: 2019-11
 director: Kathleen Woods
