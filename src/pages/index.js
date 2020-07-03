@@ -13,7 +13,7 @@ export default ({ data }) => {
             <SEO title="Home" />
             <div class="flex flex-col justify-center items-center min-h-screen">
 
-                <div>
+                <div class="mx-6 lg:mx-0">
                     <div class="intro">
                         <h1><span class="font-light">Hi.</span> I'm {data.site.siteMetadata.portfolioName}.</h1>
                     </div>
@@ -23,13 +23,13 @@ export default ({ data }) => {
                     </div>
                 </div>
 
-                <div class="w-full mr-20 ml-20">
-                    <div class="recent-list grid grid-cols-2">
+                <div class="w-full px-2">
+                    <div class="sm-recent-list xl:lg-recent-list grid grid-cols-1 md:grid-cols-2">
                         {data.allMarkdownRemark.edges.map(({ node }) => 
                         <div key={node.id} class="recent-box">
                             <Link class="h-full" to={node.fields.slug}>
-                                <div class="recent-image">
-                                    <Img class="" imgStyle={{ objectFit: 'none' }} fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
+                                <div class="h-full object-center">
+                                    <Img style={{ height:'100%' }} imgStyle={{ objectPosition: 'center' }} fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
                                 </div>
                                 <div class="h-full w-full relative opacity-0 hover:opacity-75 duration-300 bg-white flex flex-col items-center justify-center recent-name">
                                     <h1 class="recent-title">{node.frontmatter.title}</h1>

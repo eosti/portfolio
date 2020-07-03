@@ -7,9 +7,14 @@
     font-weight: lighter;
 }
 
-.recent-list {
+.lg-recent-list {
     padding-top: 5vh;
 }
+
+.sm-recent-list {
+    padding-top: 1vh;
+}
+
 .recent-box {
     overflow: hidden;
     max-height:25vh;
