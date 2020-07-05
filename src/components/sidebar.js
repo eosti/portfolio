@@ -19,6 +19,7 @@ export default ({ children }) => {
     )
 
     return (
+        <aside class="flex items-center justify-center max-h-screen w-1/6 max-w-xs">
         <nav class="inline-block fixed align-middle">
             <img class="logo-image" src={logo} />
             <ul class="list-none p-0">
@@ -49,5 +50,6 @@ export default ({ children }) => {
                 </li>
             </ul>
         </nav>
+        </aside>
     )
 }
