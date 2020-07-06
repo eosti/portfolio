@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Media from "react-media"
 
 import Footer from "./footer"
 import Hamburger from "./hamburger"
@@ -12,7 +13,15 @@ const Layout = ({ children }) => {
         <>
             <Header />
             <div class="min-h-screen flex flex-col md:flex-row">
-                <Hamburger />
+                <Media queries={{ desktop: { maxWidth: 768 } }}>
+                    {matches =>
+                            matches.desktop ? (
+                                <Hamburger />
+                            ) : (
+                                <Sidebar />
+                            )   
+                    }
+                </Media>
                 <section class="flex-1 bg-white min-h-full relative top-auto">
                     <main class="content-body">{children}</main>
                     <div class="footer-pos text-center"><Footer /></div>
