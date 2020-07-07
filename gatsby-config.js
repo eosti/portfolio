@@ -2,7 +2,7 @@ module.exports = {
     siteMetadata: {
         title: `Reid Sox-Harris`,
         portfolioName: `Reid Sox-Harris`,
-        description: `Reid Sox-Harris' Portfolio`,
+        description: `Hi! I'm Reid Sox-Harris. I'm a lighting designer and a maker.`,
         author: `@eosti`,
         siteUrl: `https://reidsoxharris.me`,
     },
@@ -32,6 +32,13 @@ module.exports = {
             resolve: `gatsby-plugin-postcss`,
             options: {
                 postCssPlugins: [require('postcss-import'), require("tailwindcss"), require("autoprefixer")],
+            },
+        },
+        {
+            resolve: `gatsby-plugin-nprogress`,
+            options: {
+                color: `purple`,
+                showSpinner: false,
             },
         },
         `gatsby-plugin-robots-txt`,
