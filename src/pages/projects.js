@@ -9,18 +9,17 @@ import './projects.css'
 export default ({ data }) => {
     return (
         <Layout>
-            <h2>Hey! I haven't actually posted anything here yet. I wanted to get the site out for stage tech portfolios. Check back soon.</h2>
             <SEO title="Projects" />
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6 pr-2 md:pr-6 mb-2 md:mb-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 px-4 md:pr-6 my-4 md:my-6">
                 {data.allMarkdownRemark.edges.map(({ node }) => (
                     <div key={node.id} class="project-box">
-                        <Link class="no-underline h-full" to={node.fields.slug}>
+                        <Link class="no-underline h-full relative" to={node.fields.slug}>
                             <div class="h-full object-center">
                                 <Img style={{ height: '100%' }} imgStyle={{ objectPosition: 'center' }} fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
                             </div>
-                            <div class="h-full w-full top-0 left-0 relative opacity-0 hover:opacity-75 duration-300 bg-white project-name flex flex-col items-center justify-center">
-                                <h1 class="project-title">{node.frontmatter.title}</h1>
-                                <h3 class="project-tagline">{node.frontmatter.tagline}</h3>
+                            <div class="relative inset-0 h-full w-full opacity-0 hover:opacity-75 duration-300 bg-white project-name flex flex-col items-center justify-center">
+                                <h1 class="project-title px-2">{node.frontmatter.title}</h1>
+                                <h3 class="project-tagline px-4">{node.frontmatter.tagline}</h3>
                             </div>
                         </Link>
                     </div>

@@ -10,7 +10,7 @@ export default ({data}) => {
     return (
         <Layout>
             <SEO title={post.frontmatter.title} />
-            <div class="text-center mt-24">
+            <div class="text-center mt-0 md:mt-16">
                 <h1 class="project-title font-bold mb-1">{post.frontmatter.title}</h1>
                 <h3 class="mb-2 project-tagline">{post.frontmatter.tagline}</h3>
                 <div class="flex flex-row items-center justify-center mb-12">
@@ -27,7 +27,7 @@ export default ({data}) => {
             </div>
 
             <div class="mb-8">
-                <div class="text-center flex flex-col justify-center content-center m-auto project-post-contents" dangerouslySetInnerHTML={{ __html: post.html }} />
+                <div class="text-center flex flex-col justify-center content-center m-auto px-4 max-w-lg lg:max-w-screen-md" dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>
         </Layout>
     )

@@ -1,7 +1,7 @@
 * { margin:0; padding:0; }
 
 .project-box {
-    max-height: 45vh;
+    max-height: 40vh;
     height: 100%;
     overflow: hidden;
 }
@@ -18,14 +18,14 @@
 }
 
 .project-name {
-    top: -45vh;
+    top: -40vh;
 }
 
 .project-title {
     font-size: 300%;
     font-weight: bolder;
     color: #404040;
-    white-space: nowrap;
+    white-space: wrap;
     text-align: center;
 
 }
@@ -34,6 +34,6 @@
     font-size: 150%;
     font-weight: bolder;
     color: #404040;
-    white-space: nowrap;
+    white-space: wrap;
     text-align: center;
 }
