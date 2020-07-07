@@ -27,7 +27,7 @@ export default ({data}) => {
             </div>
 
             <div class="mb-8">
-                <div class="text-center flex flex-col justify-center content-center m-auto px-4 max-w-lg lg:max-w-screen-md" dangerouslySetInnerHTML={{ __html: post.html }} />
+                <div class="text-center flex flex-col justify-center content-center m-auto px-4 max-w-lg lg:max-w-screen-md project-post-contents" dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>
         </Layout>
     )
