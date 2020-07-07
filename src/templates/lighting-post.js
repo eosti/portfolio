@@ -10,7 +10,7 @@ export default ({data}) => {
   return (
     <Layout>
         <SEO title={post.frontmatter.title} />
-        <div class="blog-content mr-4">
+        <div class="blog-content mx-4 mt-0 md:mt-4">
             <div class="show-info">
                 <p><span class="show-name">{post.frontmatter.title}</span>, {post.frontmatter.date}</p>
                 <p>By {post.frontmatter.author}</p>
