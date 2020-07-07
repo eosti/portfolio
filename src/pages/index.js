@@ -11,7 +11,7 @@ export default ({ data }) => {
     return (
         <Layout>
             <SEO title="Home" />
-            <div class="flex flex-col justify-center items-center min-h-screen">
+            <div class="flex flex-col justify-center items-center min-h-screen mb-4 md:mb-0">
 
                 <div class="mx-6 lg:mx-0">
                     <div class="intro">

@@ -20,36 +20,38 @@ export default ({ children }) => {
 
     return (
         <aside class="flex items-center justify-center max-h-screen w-1/6 max-w-xs">
-        <nav class="inline-block fixed align-middle">
-            <img class="logo-image" src={logo} />
-            <ul class="list-none p-0">
-                <li>
-                    <Link to="/" class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700">
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/about" class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700">
-                        About
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/lighting/"  class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700" partiallyActive={true}>
-                        Lighting Design
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/projects/" class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700" partiallyActive={true}>
-                        Projects
-                    </Link>
-                </li>
-                <li>
-                    <a href="mailto:hello@reidsoxharris.me" class="text-black hover:text-purple-700">
-                        Contact
-                    </a>
-                </li>
-            </ul>
-        </nav>
+            <nav class="inline-block fixed align-middle">
+                <Link to="/">
+                    <img class="logo-image" src={logo} />
+                </Link>
+                <ul class="list-none p-0">
+                    <li>
+                        <Link to="/" class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700">
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/about" class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700">
+                            About
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/lighting/"  class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700" partiallyActive={true}>
+                            Lighting Design
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/projects/" class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700" partiallyActive={true}>
+                            Projects
+                        </Link>
+                    </li>
+                    <li>
+                        <a href="mailto:hello@reidsoxharris.me" class="text-black hover:text-purple-700">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </aside>
     )
 }
