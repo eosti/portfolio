@@ -18,7 +18,7 @@ export default ({ data }) => {
                                 <Img style={{height:'100%'}} imgStyle={{ objectPosition: 'center' }} fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
                             </div>
                             <div class="h-full w-full left-0 top-0 relative opacity-0 hover:opacity-75 duration-300 bg-white show-name">
-                                <h1 class="show-title text-gray-700 whitespace-normal h-full text-center m-auto">{node.frontmatter.title}</h1>
+                                <h1 class="show-title text-gray-800 whitespace-normal h-full text-center m-auto">{node.frontmatter.title}</h1>
                             </div>
                         </Link>
                     </div>
