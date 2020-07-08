@@ -12,14 +12,14 @@ export default ({ data }) => {
             <SEO title="Projects" />
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 px-4 md:pr-6 my-4 md:my-6">
                 {data.allMarkdownRemark.edges.map(({ node }) => (
-                    <div key={node.id} class="project-box">
+                    <div key={node.id} class="project-box h-full overflow-hidden">
                         <Link class="no-underline h-full relative" to={node.fields.slug}>
                             <div class="h-full object-center">
                                 <Img style={{ height: '100%' }} imgStyle={{ objectPosition: 'center' }} fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
                             </div>
                             <div class="relative inset-0 h-full w-full opacity-0 hover:opacity-75 duration-300 bg-white project-name flex flex-col items-center justify-center">
-                                <h1 class="project-title px-2">{node.frontmatter.title}</h1>
-                                <h3 class="project-tagline px-4">{node.frontmatter.tagline}</h3>
+                                <h1 class="project-title px-2 color-gray-700 whitespace-normal text-center">{node.frontmatter.title}</h1>
+                                <h3 class="project-tagline px-4 color-gray-700 whitespace-normal text-center">{node.frontmatter.tagline}</h3>
                             </div>
                         </Link>
                     </div>
