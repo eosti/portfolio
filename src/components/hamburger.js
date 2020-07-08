@@ -12,7 +12,9 @@ export default ({ children }) => {
         <div class="flex-initial h-16">
             <div class="w-screen h-full">
             <Menu customBurgerIcon={ <img src={hamburgerIcon} /> }>
-                <img src={logo} />
+                <Link to="/">
+                    <img src={logo} />
+                </Link>
                 <Link to="/" class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700">
                     Home
                 </Link>
@@ -29,7 +31,7 @@ export default ({ children }) => {
                     Contact
                 </a>
             </Menu>
-            <div class="fixed logo-image-menubar">
+            <div class="absolute logo-image-menubar">
                 <Link to="/">
                     <img class="logo-image-menubar m-auto" src={logo} />
                 </Link>
