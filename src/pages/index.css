@@ -7,39 +7,12 @@
     font-weight: lighter;
 }
 
-.lg-recent-list {
-    padding-top: 5vh;
-}
-
-.sm-recent-list {
-    padding-top: 1vh;
-}
-
 .recent-box {
-    overflow: hidden;
     max-height:25vh;
-    margin: 5px;
-    height: 100%;
 }
 
 .recent-box a {
     text-decoration: none;
-    height: 100%;
-}
-
-.recent-image {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 25vh;
-}
-
-.recent-image img {
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translateX(0%) translateY(-30%)
 }
 
 .recent-name {
@@ -49,8 +22,4 @@
 .recent-title {
     font-size: 200%;
     font-weight: bolder;
-    color: #404040;
-    white-space: nowrap;
-    text-align: center;
-    margin-bottom: 0px;
 }
