@@ -13,14 +13,14 @@ export default ({ data }) => {
             <div class="grid grid-cols-1 gap-4 px-4 my-4">
                 {data.allMarkdownRemark.edges.map(({ node }) => (
                     <div key={node.id} class="overflow-hidden h-full show-box">
-                            <Link class="h-full" to={node.fields.slug}>
-                                <div class="h-full object-center">
-                                    <Img style={{height:'100%'}} imgStyle={{ objectPosition: 'center' }} fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
-                                </div>
-                                <div class="h-full w-full left-0 top-0 relative opacity-0 hover:opacity-75 duration-300 bg-white show-name">
-                                    <h1 class="show-title">{node.frontmatter.title}</h1>
-                                </div>
-                            </Link>
+                        <Link class="h-full" to={node.fields.slug}>
+                            <div class="h-full object-center">
+                                <Img style={{height:'100%'}} imgStyle={{ objectPosition: 'center' }} fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
+                            </div>
+                            <div class="h-full w-full left-0 top-0 relative opacity-0 hover:opacity-75 duration-300 bg-white show-name">
+                                <h1 class="show-title text-gray-700 whitespace-normal h-full text-center m-auto">{node.frontmatter.title}</h1>
+                            </div>
+                        </Link>
                     </div>
                 ))}
             </div>
@@ -33,7 +33,7 @@ export const query = graphql`
         allMarkdownRemark(
             sort: { fields: [frontmatter___date], order: DESC }
             filter: { fileAbsolutePath: {regex: "/(lighting)/"  }}
-            ) {
+        ) {
             totalCount
             edges {
                 node {
