@@ -23,8 +23,8 @@ const Layout = ({ children }) => {
                     }
                 </Media>
                 <section class="flex-1 bg-white min-h-full relative">
-                    <main class="content-body">{children}</main>
-                    <div class="footer-pos text-center"><Footer /></div>
+                    <main class="pb-12">{children}</main>
+                    <div class="bottom-0 absolute w-full h-1 text-center"><Footer /></div>
                 </section>
             </div>
 

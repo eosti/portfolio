@@ -20,9 +20,9 @@ export default ({ children }) => {
 
     return (
         <aside class="flex items-center justify-center max-h-screen w-1/6 max-w-xs">
-            <nav class="inline-block fixed align-middle">
+            <nav class="inline-block fixed align-middle wrap-normal">
                 <Link to="/">
-                    <img class="logo-image" alt="Logo" src={logo} />
+                    <img class="logo-image h-auto justify-center" alt="Logo" src={logo} />
                 </Link>
                 <ul class="list-none p-0">
                     <li>

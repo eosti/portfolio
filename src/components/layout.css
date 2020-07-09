@@ -4,44 +4,6 @@
 
 @import "tailwindcss/utilities";
 
-.footer-pos {
-    bottom: 0; 
-    position: absolute;
-    height: 60px;
-    width: 100%;
-}
-
-.content-body {
-    padding-bottom: 60px;
-}
-
-.flex-grid {
-    display: flex;
-    margin: auto -1rem 1rem;
-    padding-top: 2rem;
-    flex-grow: 1;
-}
-
-.col {
-    background-color: white;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    padding: 1rem;
-}
-
-.main {
-    flex: 8;
-    margin: 0 auto;
-    max-width: 960;
-    overflow-y: auto;
-}
-
-.site {
-    display: flex;
-    min-height: 102vh;
-    flex-direction: column;
-}
-
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;

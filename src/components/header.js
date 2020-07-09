@@ -4,8 +4,8 @@ import { Helmet } from "react-helmet"
 
 const Header = ({ siteTitle }) => (
     <Helmet>
-      <script src="https://kit.fontawesome.com/0212ad74e5.js" crossorigin="anonymous"></script>
-  </Helmet>
+        <script src="https://kit.fontawesome.com/0212ad74e5.js" crossorigin="anonymous"></script>
+    </Helmet>
 )
 
 export default Header

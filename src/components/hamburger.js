@@ -12,8 +12,8 @@ export default ({ children }) => {
         <div class="flex-initial h-16">
             <div class="w-screen h-full">
             <Menu customBurgerIcon={ <img src={hamburgerIcon} /> }>
-                <Link to="/">
-                    <img src={logo} />
+                <Link class="mb-6" to="/">
+                    <img class="block p-0 m-0" src={logo} />
                 </Link>
                 <Link to="/" class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700">
                     Home
@@ -33,7 +33,7 @@ export default ({ children }) => {
             </Menu>
             <div class="absolute logo-image-menubar">
                 <Link to="/">
-                    <img class="logo-image-menubar m-auto" src={logo} />
+                    <img class="logo-image-menubar p-0 m-0 block" src={logo} />
                 </Link>
             </div>
             </div>

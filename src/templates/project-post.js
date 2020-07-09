@@ -16,7 +16,7 @@ export default ({data}) => {
                 <div class="flex flex-row items-center justify-center mb-12">
 
                     { post.frontmatter.github &&
-                        <div class="pr-6"><a class="text-gray-900" target="_blank" rel="noopener noreferrer" href={post.frontmatter.github}><i class="fab fa-github"></i> Github Repo</a></div>
+                    <div class="pr-6"><a class="text-gray-900" target="_blank" rel="noopener noreferrer" href={post.frontmatter.github}><i class="fab fa-github"></i> Github Repo</a></div>
                     }
 
                     { post.frontmatter.buildguide &&
