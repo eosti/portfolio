@@ -1,6 +1,6 @@
 ---
 title: A Wonderful Placeholder
-slug: /project/testProject
+slug: /projects/testProject
 tagline: Obviously a placeholder.
 featuredImage: ./sparks.jpg
 date: 2018-12

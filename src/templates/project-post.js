@@ -16,18 +16,22 @@ export default ({data}) => {
                 <div class="flex flex-row items-center justify-center mb-12">
 
                     { post.frontmatter.github &&
-                    <div class="pr-6"><a class="text-gray-900" target="_blank" rel="noopener noreferrer" href={post.frontmatter.github}><i class="fab fa-github"></i> Github Repo</a></div>
+                        <div class="mr-6"><a class="text-gray-900" target="_blank" rel="noopener noreferrer" href={post.frontmatter.github}><i class="fab fa-github"></i> Github Repo</a></div>
                     }
 
                     { post.frontmatter.buildguide &&
-                        <div><Link class="text-gray-900" to={post.frontmatter.buildguide}><i class="fas fa-hammer"></i> Build Guide</Link></div>
+                        <div class=""><Link class="text-gray-900" to={post.frontmatter.buildguide}><i class="fas fa-hammer"></i> Build Guide</Link></div>
+                    }
+
+                    { post.frontmatter.projectsite &&
+                        <div class=""><a class="text-gray-900" target="_blank" rel="noopener noreferrer" href={post.frontmatter.projectsite}><i class="fas fa-link"></i> {post.frontmatter.projectsitetype}</a></div>
                     }
 
                 </div>
             </div>
 
             <div class="mb-8">
-                <div class="text-center flex flex-col justify-center content-center m-auto px-4 max-w-lg lg:max-w-screen-md project-post-contents" dangerouslySetInnerHTML={{ __html: post.html }} />
+                <div class="text-left flex flex-col justify-center content-center m-auto px-4 max-w-lg lg:max-w-screen-md project-post-contents" dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>
         </Layout>
     )
@@ -43,6 +47,8 @@ export const query = graphql`
                 tagline
                 github
                 buildguide
+                projectsite
+                projectsitetype
             }
         }
     }

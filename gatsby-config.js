@@ -77,8 +77,16 @@ module.exports = {
                             quality: 80,
                             linkImagesToOriginal: false,
                             wrapperStyle: 'margin-bottom:5px;',
-                        }
-                    }
+                            showCaptions: true,
+                        },
+                    },
+                    {
+                        resolve:`gatsby-remark-external-links`,
+                            options: {
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                            },
+                    },
                 ],
             },
         },
