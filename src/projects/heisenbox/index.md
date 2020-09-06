@@ -4,6 +4,7 @@ slug: /projects/heisenbox
 tagline: Is it alive or dead?
 featuredImage: ./heisenbox-feature.jpg
 date: 2019-11
+github: https://github.com/eosti/heisenbox
 ---
 
 Heisenberg's Uncertainty Principle states only one of two things can be known about a particle at any given time: its velocity or position
@@ -25,4 +26,4 @@ The control of the box is simple: the 'start' button is connected to the MSP430'
 
 Side note, the handle that I used is actually the cheapest one that you can get from Home Depot (at least at the time). Given that, I'm surprised by how nice it looks. 
 
-I'll throw the code up on Github once I make it look marginally better.
+The code is up on Github [here](https://github.com/eosti/heisenbox). It's nothing too nice, but hey, it's there. There are TM1637 drivers there that work with MSP430s, derived from an ATtiny library that's linked there too. 
