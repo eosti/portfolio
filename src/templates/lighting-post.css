@@ -1,6 +1,7 @@
 .show-info {
     font-weight: lighter;
     font-size: smaller;
+    max-width: 1600px;
 }
 
 .show-info p {

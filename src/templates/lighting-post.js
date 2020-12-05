@@ -11,7 +11,7 @@ export default ({data}) => {
         <Layout>
             <SEO title={post.frontmatter.title} />
             <div class="mx-4 mt-0 md:mt-4">
-                <div class="show-info m-0 mb-6">
+                <div class="show-info m-auto mb-6">
                     <p><span class="show-name">{post.frontmatter.title}</span>, {post.frontmatter.date}</p>
                     <p>By {post.frontmatter.author}</p>
                     <p>Directed by {post.frontmatter.director}</p>
