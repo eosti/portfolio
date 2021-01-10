@@ -612,10 +612,10 @@ pre code {
 }
 code:before,
 code:after,
-tt:before,
+tt:before, 
 tt:after {
     letter-spacing: -0.2em;
-    content: " ";
+    content: "\00a0";
 }
 pre code:before,
 pre code:after,
