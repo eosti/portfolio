@@ -82,11 +82,27 @@ module.exports = {
                     },
                     {
                         resolve:`gatsby-remark-external-links`,
-                            options: {
-                                target: "_blank",
-                                rel: "noopener noreferrer",
-                            },
+                        options: {
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                        },
                     },
+                    {
+                        resolve: `gatsby-remark-prismjs`,
+                        options:{
+                            classPrefix: "language-",
+                            inlineCodeMarker: null,
+                            aliases: {},
+                            showLineNumbers: false,
+                            noInlineHighlight: false,
+                            prompt: {
+                                user: "root",
+                                host: "localhost",
+                                global: false,
+                            },
+                            escapeEntities: {},
+                        }
+                    }
                 ],
             },
         },
