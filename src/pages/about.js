@@ -14,14 +14,13 @@ export default ({ data  }) => {
                 <h1>About</h1>
                 <h4 class="mb-4">Lighting</h4>
                     <ul>
-                        <li>Lighting the stage since the tender age of 8</li>
                         <li>Designed for companies such as A Theatre Near U and Paly Theatre</li>
                         <li>Electrician for Theatreworks Silicon Valley, West Bay Opera, and others</li>
                         <li>Want a resume? Interested in me designing your show? <a href="mailto:hello@reidsoxharris.me">Contact me</a>!</li>
                     </ul>
                     <h4 class="mb-4">Electronics</h4>
                     <ul>
-                        <li>Incoming student at University of Toronto for engineering</li>
+                        <li>First year Electrical Engineer at University of Toronto</li>
                         <li>Experience with Arduino, MSP430, Unix, among others</li>
                         <li>Someday, I'll have a big, fancy looking bench</li>
                     </ul>
