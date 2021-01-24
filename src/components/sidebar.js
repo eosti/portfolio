@@ -26,27 +26,27 @@ export default ({ children }) => {
                 </Link>
                 <ul class="list-none p-0">
                     <li>
-                        <Link to="/" class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700">
+                        <Link to="/" class="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700">
                             Home
                         </Link>
                     </li>
                     <li>
-                        <Link to="/about" class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700">
+                        <Link to="/about" class="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700">
                             About
                         </Link>
                     </li>
                     <li>
-                        <Link to="/lighting/"  class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700" partiallyActive={true}>
+                        <Link to="/lighting/"  class="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700" partiallyActive={true}>
                             Lighting Design
                         </Link>
                     </li>
                     <li>
-                        <Link to="/projects/" class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700" partiallyActive={true}>
+                        <Link to="/projects/" class="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700" partiallyActive={true}>
                             Projects
                         </Link>
                     </li>
                     <li>
-                        <a href="mailto:hello@reidsoxharris.me" class="text-black hover:text-purple-700">
+                        <a href="mailto:hello@reidsoxharris.me" class="text-gray-900 hover:text-purple-700 font-light">
                             Contact
                         </a>
                     </li>

@@ -15,19 +15,19 @@ export default ({ children }) => {
                 <Link class="mb-6" to="/">
                     <img class="block p-0 m-0" src={logo} />
                 </Link>
-                <Link to="/" class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700">
+                <Link to="/" class="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700">
                     Home
                 </Link>
-                <Link to="/about" class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700">
+                <Link to="/about" class="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700">
                     About
                 </Link>
-                <Link to="/lighting/"  class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700" partiallyActive={true}>
+                <Link to="/lighting/"  class="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700" partiallyActive={true}>
                     Lighting Design
                 </Link>
-                <Link to="/projects/" class="text-black hover:text-purple-700" activeClassName="font-semibold text-gray-800 hover:text-purple-700" partiallyActive={true}>
+                <Link to="/projects/" class="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700" partiallyActive={true}>
                     Projects
                 </Link>
-                <a href="mailto:hello@reidsoxharris.me" class="text-black hover:text-purple-700">
+                <a href="mailto:hello@reidsoxharris.me" class="text-gray-900 hover:text-purple-700 font-light">
                     Contact
                 </a>
             </Menu>
@@ -38,7 +38,5 @@ export default ({ children }) => {
             </div>
             </div>
         </div>
-
-
     )
 }
