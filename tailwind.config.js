@@ -122,6 +122,11 @@ module.exports = {
       },
     },
   },
-  corePlugins: {},
-  plugins: [],
+  variants: {
+    opacity: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'hover-hover', 'hover-none'],
+    backgroundOpacity: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'hover-hover', 'hover-none'],
+  },
+  plugins: [
+        require('tailwindcss-touch')(),
+    ],
 }

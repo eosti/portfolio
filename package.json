@@ -46,7 +46,8 @@
   "devDependencies": {
     "eslint": "^7.8.1",
     "eslint-plugin-react": "^7.20.6",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "tailwindcss-touch": "^1.0.1"
   },
   "keywords": [
     "gatsby"

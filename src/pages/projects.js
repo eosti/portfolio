@@ -17,9 +17,9 @@ export default ({ data }) => {
                             <div class="h-full object-center">
                                 <Img style={{ height: '100%' }} imgStyle={{ objectPosition: 'center' }} fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
                             </div>
-                            <div class="relative inset-0 h-full w-full opacity-0 hover:opacity-75 duration-300 bg-white project-name flex flex-col items-center justify-center">
-                                <h1 class="project-title px-2 text-gray-800 whitespace-normal text-center">{node.frontmatter.title}</h1>
-                                <h3 class="project-tagline px-4 text-gray-800 whitespace-normal text-center">{node.frontmatter.tagline}</h3>
+                            <div class="relative inset-0 h-full w-full hover-hover:opacity-0 hover:opacity-75 hover-none:bg-opacity-60 duration-300 bg-white project-name flex flex-col items-center justify-center">
+                                <h1 class="project-title px-2 text-gray-800 whitespace-normal text-center hover-none:opacity-95 w-full">{node.frontmatter.title}</h1>
+                                <h3 class="project-tagline px-4 text-gray-800 whitespace-normal text-center hover-none:opacity-90 w-full">{node.frontmatter.tagline}</h3>
                             </div>
                         </Link>
                     </div>
