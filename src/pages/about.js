@@ -12,19 +12,19 @@ export default ({ data  }) => {
             <SEO title="About" />
             <div class="flex flex-col text-left align-center m-auto md:min-h-full mx-16 md:mx-32 md:h-screen mt-0 md:mt-16">
                 <h1>About</h1>
+                <h4 class="mb-4">Electronics</h4>
+                <ul>
+                    <li>First year electrical engineer at University of Toronto</li>
+                    <li>Programming Experience: C, Python, bash, git, MATLAB, JavaScript</li>
+                    <li>Microcontrollers: Arduino, MSP430, STM32, Raspberry Pi</li>
+
+                </ul>
                 <h4 class="mb-4">Lighting</h4>
-                    <ul>
-                        <li>Designed for companies such as A Theatre Near U and Paly Theatre</li>
-                        <li>Electrician for Theatreworks Silicon Valley, West Bay Opera, and others</li>
-                        <li>Want a resume? Interested in me designing your show? <a href="mailto:hello@reidsoxharris.me">Contact me</a>!</li>
-                    </ul>
-                    <h4 class="mb-4">Electronics</h4>
-                    <ul>
-                        <li>First year Electrical Engineer at University of Toronto</li>
-                        <li>Experience with Arduino, MSP430, Unix, among others</li>
-                        <li>Someday, I'll have a big, fancy looking bench</li>
-                    </ul>
-                    <h4 class="mb-4">Other</h4>
+                <ul>
+                    <li>Designed for companies such as A Theatre Near U and Paly Theatre</li>
+                    <li>Electrician for Theatreworks Silicon Valley, West Bay Opera, and others</li>
+                </ul>
+                <h4 class="mb-4">Other</h4>
                 <ul>
                     <li>Unhealthy addiction to keyboards
                         <ul>

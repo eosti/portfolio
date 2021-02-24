@@ -17,8 +17,8 @@ export default ({ data }) => {
                         <h1><span class="font-light">Hi.</span> I'm {data.site.siteMetadata.portfolioName}.</h1>
                     </div>
                     <div class="intro-subtext text-grey-500">
-                        <h2>I'm a <Link class="text-purple-600 hover:text-purple-800" to="/lighting/">lighting designer </Link>
-                            and a <Link class="text-purple-600 hover:text-purple-800" to="/projects">maker</Link>.</h2>
+                        <h2>I'm a <Link class="text-purple-600 hover:text-purple-800" to="/projects/">maker </Link>
+                            and a <Link class="text-purple-600 hover:text-purple-800" to="/lighting/">lighting designer</Link>.</h2>
                     </div>
                 </div>
 
