@@ -10,6 +10,7 @@ export default ({ data }) => {
     return (
         <Layout>
             <SEO title="Lighting Design" />
+            <div class="text-6xl font-thin pt-12 pb-2 pl-6 text-purple-600">Lighting Design</div>
             <div class="grid grid-cols-1 gap-4 px-4 my-4">
                 {data.allMarkdownRemark.edges.map(({ node }) => (
                     <div key={node.id} class="overflow-hidden h-full show-box">
@@ -18,7 +19,7 @@ export default ({ data }) => {
                                 <Img style={{height:'100%'}} imgStyle={{ objectPosition: 'center' }} fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
                             </div>
                             <div class="h-full w-full left-0 top-0 relative hover:opacity-75 hover-hover:opacity-0 hover-none:bg-opacity-60 duration-300 bg-white show-name">
-                                <h1 class="show-title text-gray-800 whitespace-normal h-full text-center m-auto hover-none:opacity-95 w-full">{node.frontmatter.title}</h1>
+                                <h1 class="show-title text-gray-800 whitespace-normal h-full text-center text-5xl font-bold m-auto hover-none:opacity-95 w-full">{node.frontmatter.title}</h1>
                             </div>
                         </Link>
                     </div>

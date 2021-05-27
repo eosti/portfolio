@@ -11,7 +11,7 @@ export default ({ data  }) => {
         <Layout>
             <SEO title="About" />
             <div class="flex flex-col text-left align-center m-auto md:min-h-full mx-16 md:mx-32 md:h-screen mt-0 md:mt-16">
-                <h1>About</h1>
+                <div class="text-6xl font-thin pt-12 pb-8 pl-0 text-purple-600">About</div>
                 <h4 class="mb-4">Electronics</h4>
                 <ul>
                     <li>Second-year electrical/computer engineer at University of Toronto</li>

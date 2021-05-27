@@ -10,7 +10,8 @@ export default ({ data }) => {
     return (
         <Layout>
             <SEO title="Projects" />
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 px-4 md:pr-6 my-4 md:my-6">
+            <div class="text-6xl font-thin pt-12 pb-2 pl-6 text-purple-600">Projects</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 px-4 md:pr-6 my-4 md:my-4">
                 {data.allMarkdownRemark.edges.map(({ node }) => (
                     <div key={node.id} class="project-box h-full overflow-hidden">
                         <Link class="no-underline h-full relative" to={node.fields.slug}>
