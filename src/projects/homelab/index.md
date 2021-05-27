@@ -65,4 +65,15 @@ Originally I could just remember the port numbers for each service, but that get
 Many hours of pain and suffering later, each frequently used service has a sub-domain that is much easier to use.
 Theoretically, Traefik is essentially plug-and-play, but HomeAssistant and Unifi both have some networking and encryption requirements that confuse Traefik, so it took a while to get all sorted out.
 
-Having a homelab is great for tinkering around with networking and server management, and I've gotten a lot out of it!
+## The latest and the Greatest ##
+
+Well, not really. 
+
+I recently got my hands on a few G11 PowerEdge servers and have been setting up a development environment so that I don't have to test everything on live. 
+They're old (~2010) and all together draw 750W *at idle* but fantastic for learning virtualization and other server infrastructure. 
+
+It's all still a huge work in process, but the current state is a 3-host [proxmox](https://www.proxmox.com/en/) cluster with various VMs running in High Availability mode. 
+I've also been toying with [TrueNAS](https://www.truenas.com/) and ZFS, and working with the Cisco CLI to ensure fast, reliable networking. 
+Finally, nearly all actions that I complete manually I make sure to go back and automate with [Ansible](https://www.ansible.com/) so that I can be properly lazy. 
+
+Having a homelab is great for tinkering around with networking and server management, and it's been fantastic for learning about everything that goes into our Internet. 
