@@ -14,10 +14,9 @@ export default ({ data  }) => {
                 <h1>About</h1>
                 <h4 class="mb-4">Electronics</h4>
                 <ul>
-                    <li>First year electrical engineer at University of Toronto</li>
-                    <li>Programming Experience: C, Python, bash, git, MATLAB, JavaScript</li>
-                    <li>Microcontrollers: Arduino, MSP430, STM32, Raspberry Pi</li>
-
+                    <li>Second-year electrical/computer engineer at University of Toronto</li>
+                    <li>Programming Experience: C/C++, Python, bash, git, MATLAB, JavaScript</li>
+                    <li>Embedded controllers: Arduino, MSP430, STM32, Raspberry Pi</li>
                 </ul>
                 <h4 class="mb-4">Lighting</h4>
                 <ul>
