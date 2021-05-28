@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 import './lighting.css'
 
-export default ({ data  }) => {
+const AboutPage = ({ data  }) => {
     return (
         <Layout>
             <SEO title="About" />
@@ -37,3 +37,5 @@ export default ({ data  }) => {
         </Layout>
     )
 }
+
+export default AboutPage;

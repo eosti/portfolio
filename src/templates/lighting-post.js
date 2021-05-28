@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 import "./lighting-post.css"
 
-export default ({data}) => {
+const LightingTemplate = ({data}) => {
     const post = data.markdownRemark
     return (
         <Layout>
@@ -47,3 +47,5 @@ export const query = graphql`
       }
   }
 `
+
+export default LightingTemplate;

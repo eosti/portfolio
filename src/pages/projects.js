@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 import './projects.css'
 
-export default ({ data }) => {
+const ProjectsPage = ({ data }) => {
     return (
         <Layout>
             <SEO title="Projects" />
@@ -61,3 +61,5 @@ export const query = graphql`
         }
     }
 `
+
+export default ProjectsPage;

@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 import "./project-post.css"
 
-export default ({data}) => {
+const ProjectTemplate = ({data}) => {
     const post = data.markdownRemark
     return (
         <Layout>
@@ -53,3 +53,5 @@ export const query = graphql`
         }
     }
 `
+
+export default ProjectTemplate;
