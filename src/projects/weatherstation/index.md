@@ -14,7 +14,7 @@ Living in California, we must face a fire season every year that keeps getting w
 After seeing a inexpensive air quality sensor on Adafruit, I decided to make up a little weatherstation that would give live air quality, temperature, and humidity. 
 While I was at it, I wanted to put in an ADS-B receiver to check out where planes are around me -- and get that sweet, sweet [Flightradar24 Business subscription](https://www.flightradar24.com/build-your-own). It also feeds to FlightAware and ADS-B Exchange.  
 
-![description!](./weatherstation-straight.jpg "Left to right: weatherstation, ADS-B antenna (hiding a bit), and TV antenna")
+![Overview of weatherstation hardware](./weatherstation-straight.jpg "Left to right: weatherstation, ADS-B antenna (hiding a bit), and TV antenna")
 
 The weather station (with a nice [3D printed Stevenson Screen](https://www.thingiverse.com/thing:2970799)) has a [PM2.5 air quality sensor](https://www.adafruit.com/product/3686) and a [Si7021 temperature/humidity sensor](https://www.adafruit.com/product/3251), both from Adafruit.
 

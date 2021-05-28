@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import {slide as Menu} from "react-burger-menu"
 
 import "./hamburger.css"
@@ -12,19 +12,19 @@ export default ({ children }) => {
         <div class="flex-initial h-16">
             <div class="w-screen h-full">
             <Menu customBurgerIcon={ <img src={hamburgerIcon} /> }>
-                <Link class="mb-6" to="/">
+                <Link className="mb-6" to="/">
                     <img class="block p-0 m-0" src={logo} />
                 </Link>
-                <Link to="/" class="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700">
+                <Link to="/" className="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700">
                     Home
                 </Link>
-                <Link to="/about" class="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700">
+                <Link to="/about" className="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700">
                     About
                 </Link>
-                <Link to="/lighting/"  class="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700" partiallyActive={true}>
+                <Link to="/lighting/"  className="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700" partiallyActive={true}>
                     Lighting Design
                 </Link>
-                <Link to="/projects/" class="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700" partiallyActive={true}>
+                <Link to="/projects/" className="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700" partiallyActive={true}>
                     Projects
                 </Link>
                 <a href="mailto:hello@reidsoxharris.me" class="text-gray-900 hover:text-purple-700 font-light">

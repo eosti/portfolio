@@ -25,27 +25,24 @@ const LightingTemplate = ({data}) => {
     )
 }
 
-export const query = graphql`
-  query($slug: String!) {
-      markdownRemark(fields: { slug: { eq: $slug } }) {
-          html
-          frontmatter {
-              title
-              date(formatString: "YYYY")
-              director
-              author
-              company
-              location
-              featuredImage {
-                  childImageSharp {
-                      fluid(quality: 100) {
-                          ...GatsbyImageSharpFluid
-                      }
-                  }
-              }
-          }
+export const query = graphql`query ($slug: String!) {
+  markdownRemark(fields: {slug: {eq: $slug}}) {
+    html
+    frontmatter {
+      title
+      date(formatString: "YYYY")
+      director
+      author
+      company
+      location
+      featuredImage {
+        childImageSharp {
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+        }
       }
+    }
   }
+}
 `
 
 export default LightingTemplate;
