@@ -6,6 +6,8 @@ featuredImage: ./homelab-featured.jpg
 date: 2021-01
 ---
 
+Hello!
+
 I've always believed that the best way to learn how to do something is by just throwing yourself into it and doing it yourself.
 Sure, learning about routing from a book is useful, but that never really sets in until you've accidentally made a routing loop, causing the entire network to crash and then needing to reset the network while the other members of the household are impatiently waiting for the WiFi to come back up.
 
