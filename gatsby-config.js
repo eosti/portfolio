@@ -4,7 +4,7 @@ module.exports = {
         portfolioName: "Reid Sox-Harris",
         titleTemplate: "%s | Reid Sox-Harris",
         description: `Hi! I'm Reid Sox-Harris. I'm a lighting designer and a maker.`,
-        url: "https://reidsoxharris.me",
+        siteUrl: "https://reidsoxharris.me",
         image: "/src/images/reid-logo.png",
         twitterUsername: "@ReidSox",
     },
