@@ -9,7 +9,7 @@ const LightingTemplate = ({data}) => {
     const post = data.markdownRemark
     return (
         <Layout>
-            <SEO title={post.frontmatter.title} />
+            <SEO title={post.frontmatter.title} image={post.frontmatter.featuredImage} description={post.frontmatter.title + " by " + post.frontmatter.author + ", lighting design by Reid Sox-Harris"} article />
             <div class="mx-4 mt-0 md:mt-4">
                 <div class="show-info m-auto mb-6">
                     <p><span class="show-name">{post.frontmatter.title}</span>, {post.frontmatter.date}</p>
