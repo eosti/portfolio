@@ -36,7 +36,7 @@ export default ({ children }) => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/lighting/"  className="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700" partiallyActive={true}>
+                        <Link to="/lighting/" className="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700" partiallyActive={true}>
                             Lighting Design
                         </Link>
                     </li>

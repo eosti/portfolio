@@ -9,7 +9,7 @@ const ProjectTemplate = ({data}) => {
     const post = data.markdownRemark
     return (
         <Layout>
-            <SEO title={post.frontmatter.title} />
+            <SEO title={post.frontmatter.title} image={post.frontmatter.featuredImage} description={post.frontmatter.tagline} article />
             <div class="text-center mt-0 md:mt-16">
                 <h1 class="project-title font-bold mb-1">{post.frontmatter.title}</h1>
                 <h3 class="mb-2 project-tagline">{post.frontmatter.tagline}</h3>
@@ -49,6 +49,11 @@ export const query = graphql`
                 buildguide
                 projectsite
                 projectsitetype
+                featuredImage {
+                    childImageSharp {
+                        gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+                    }
+                }
             }
         }
     }

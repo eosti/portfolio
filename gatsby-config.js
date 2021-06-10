@@ -1,10 +1,12 @@
 module.exports = {
     siteMetadata: {
         title: `Reid Sox-Harris`,
-        portfolioName: `Reid Sox-Harris`,
+        portfolioName: "Reid Sox-Harris",
+        titleTemplate: "%s | Reid Sox-Harris",
         description: `Hi! I'm Reid Sox-Harris. I'm a lighting designer and a maker.`,
-        author: `@eosti`,
-        siteUrl: `https://reidsoxharris.me`,
+        siteUrl: "https://reidsoxharris.me",
+        image: "/src/images/reid-logo.png",
+        twitterUsername: "@ReidSox",
     },
     plugins: [
         {
@@ -45,8 +47,15 @@ module.exports = {
         `gatsby-plugin-sitemap`,
         `gatsby-plugin-react-helmet`,
         `gatsby-transformer-sharp`,
-        `gatsby-plugin-image`,
         `gatsby-plugin-sharp`,
+        {
+            resolve: `gatsby-plugin-image`,
+            options: {
+                defaults: {
+                    placeholder: `blurred`,
+                }
+            }
+        },
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
