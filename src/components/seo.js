@@ -36,7 +36,7 @@ const SEO = ({ title, description, image, article }) => {
         <Helmet title={seo.title} titleTemplate={titleTemplate}>
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
-            <meta http-equiv='content-language' content='en-us'>
+            <meta http-equiv='content-language' content='en-us' />
 
             {seo.url && <link rel="canonical" href={seo.url} />}
             {seo.url && <meta property="og:url" content={seo.url} />}
