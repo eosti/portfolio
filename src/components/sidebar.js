@@ -31,7 +31,7 @@ export default ({ children }) => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/about" className="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700">
+                        <Link to="/about/" className="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700">
                             About
                         </Link>
                     </li>
