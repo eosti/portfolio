@@ -46,7 +46,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-sitemap`,
             options: {
-
+                output: "/./"
             },
         },
         `gatsby-plugin-robots-txt`,
