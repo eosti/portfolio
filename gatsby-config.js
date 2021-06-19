@@ -43,8 +43,13 @@ module.exports = {
                 showSpinner: false,
             },
         },
+        {
+            resolve: `gatsby-plugin-sitemap`,
+            options: {
+
+            },
+        },
         `gatsby-plugin-robots-txt`,
-        `gatsby-plugin-sitemap`,
         `gatsby-plugin-react-helmet`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
