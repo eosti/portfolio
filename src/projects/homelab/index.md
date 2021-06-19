@@ -56,7 +56,7 @@ The router and the switch can only be configured via their own web-based GUI or 
 
 [HomeAssistant](https://www.home-assistant.io/) is used for a few smarthome-type things.
 The main automation is to have my WiZ smartlights change color temperature though the day using [adaptive-lighting](https://github.com/basnijholt/adaptive-lighting).
-[Mosquitto](https://hub.docker.com/_/eclipse-mosquitto) is my MQTT broker of choice, communicating with a smart switch and my [weatherstation](../weatherstation).
+[Mosquitto](https://hub.docker.com/_/eclipse-mosquitto) is my MQTT broker of choice, communicating with a smart switch and my [weatherstation](../weatherstation/).
 
 I use [JellyFin](https://jellyfin.org/) for the occasional video streaming need, and [node-sonos-http-api](https://github.com/jishi/node-sonos-http-api) for the backend to my [Sonos remote](https://github.com/eosti/sonos-remote).
 
