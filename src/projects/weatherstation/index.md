@@ -29,7 +29,7 @@ The Pi and the SDR aren't particularly weathersealed, but hopefully between gene
 All the data that's collected uploads to [Adafruit IO](https://io.adafruit.com), which offers a free tier that gives up to 10 feeds, at a maximum of 30 measurements per minute. 
 I'm way under that at 5 feeds and 5 measurements every 2 minutes, so that works great for me. It only keeps the data for 30 days, but this is less of a long-term scientific experiment and more of a "how's the weather right now?"
 
-The data is also sent to HomeAssistant via MQTT, which is running on [my local server](../homelab).
+The data is also sent to HomeAssistant via MQTT, which is running on [my local server](../homelab/).
 This means that I can trigger automations and send alerts when the air quality gets particularly bad.
 
 You can check out the code running on the Pi [on Github](https://github.com/eosti/weatherstation) and see the current data [on Adafruit IO](https://io.adafruit.com/eosti/dashboards/outside-weather).

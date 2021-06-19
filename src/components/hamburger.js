@@ -11,14 +11,14 @@ export default ({ children }) => {
     return (
         <div class="flex-initial h-16">
             <div class="w-screen h-full">
-            <Menu customBurgerIcon={ <img src={hamburgerIcon} /> }>
+            <Menu customBurgerIcon={ <img src={hamburgerIcon} alt="Hamburger dropdown" /> }>
                 <Link className="mb-6" to="/">
-                    <img class="block p-0 m-0" src={logo} />
+                    <img class="block p-0 m-0" alt="Logo" src={logo} />
                 </Link>
                 <Link to="/" className="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700">
                     Home
                 </Link>
-                <Link to="/about" className="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700">
+                <Link to="/about/" className="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700">
                     About
                 </Link>
                 <Link to="/lighting/"  className="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700" partiallyActive={true}>
