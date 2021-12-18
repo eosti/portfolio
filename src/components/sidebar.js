@@ -1,9 +1,8 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 
 import "./sidebar.css"
-import logo from "../images/reid-logo.png"
 
 export default ({ children }) => {
     const data = useStaticQuery(
@@ -22,7 +21,7 @@ export default ({ children }) => {
         <aside class="flex items-center justify-center max-h-screen w-1/6 max-w-xs">
             <nav class="inline-block fixed align-middle wrap-normal">
                 <Link to="/">
-                    <img class="logo-image h-auto justify-center pb-2" alt="Logo" src={logo} />
+                    <StaticImage src="../images/reid-logo.png" alt="Logo" loading="eager" imgClassName="logo-image h-auto justify-center pb-2" />
                 </Link>
                 <ul class="list-none p-0">
                     <li>

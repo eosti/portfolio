@@ -13,7 +13,7 @@ export default ({ children }) => {
             <div class="w-screen h-full">
             <Menu customBurgerIcon={ <img src={hamburgerIcon} alt="Hamburger dropdown" /> }>
                 <Link className="mb-6" to="/">
-                    <img class="block p-0 m-0" alt="Logo" src={logo} />
+                    <GatsbyImage src={logo} alt="Logo" loading="eager" imgClassName="block p-0 m-0" />
                 </Link>
                 <Link to="/" className="text-gray-900 hover:text-purple-700 font-light" activeClassName="font-semibold text-gray-900 hover:text-purple-700">
                     Home
