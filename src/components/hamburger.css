@@ -67,15 +67,3 @@
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
-
-logo-image-menubar {
-    max-height: 42px;
-    width: auto;
-    right: 12px;
-    top: 10px;
-}
-
-.bm-item-list img {
-    max-height: 6rem;
-    width: auto;
-}
