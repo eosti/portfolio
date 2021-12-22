@@ -8,26 +8,23 @@ import Sidebar from "./sidebar"
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+function Layout({ children }) {
     return (
         <>
             <Header />
-            <div class="min-h-screen flex flex-col md:flex-row">
+            <div className="min-h-screen flex flex-col md:flex-row">
                 <Media queries={{ desktop: { maxWidth: 768 } }}>
-                    {matches =>
-                            matches.desktop ? (
-                                <Hamburger />
-                            ) : (
-                                <Sidebar />
-                            )   
+                    {(matches) =>
+                        matches.desktop ? <Hamburger /> : <Sidebar />
                     }
                 </Media>
-                <section class="flex-1 bg-white min-h-full relative">
-                    <main class="pb-12">{children}</main>
-                    <div class="bottom-0 absolute w-full h-1 text-center"><Footer /></div>
+                <section className="flex-1 bg-white min-h-full relative">
+                    <main className="pb-12">{children}</main>
+                    <div className="bottom-0 absolute w-full h-1 text-center">
+                        <Footer />
+                    </div>
                 </section>
             </div>
-
         </>
     )
 }
