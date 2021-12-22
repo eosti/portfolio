@@ -1,36 +1,53 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
-import { GatsbyImage } from "gatsby-plugin-image";
 import SEO from "../components/seo"
 
-import './lighting.css'
-
-const AboutPage = ({ data  }) => {
+function AboutPage() {
     return (
         <>
             <SEO title="About" />
-            <div class="flex flex-col text-left align-center m-auto md:min-h-full mx-16 md:mx-32 md:h-screen mt-0 md:mt-16">
-                <div class="text-6xl font-thin pt-12 pb-8 pl-0 text-purple-600">About</div>
-                <h4 class="mb-4">Electronics</h4>
+            <div className="flex flex-col text-left align-center m-auto md:min-h-full mx-16 md:mx-32 md:h-screen mt-0 md:mt-16">
+                <div className="text-6xl font-thin pt-12 pb-8 pl-0 text-purple-600">
+                    About
+                </div>
+                <h4 className="mb-4">Electronics</h4>
                 <ul>
-                    <li>Second-year electrical/computer engineer at University of Toronto</li>
-                    <li>Programming Experience: C/C++, Python, bash, git, MATLAB, JavaScript</li>
-                    <li>Embedded controllers: Arduino, MSP430, STM32, Raspberry Pi</li>
+                    <li>
+                        Second-year electrical/computer engineer at University
+                        of Toronto
+                    </li>
+                    <li>
+                        Programming Experience: C/C++, Python, bash, git,
+                        MATLAB, JavaScript
+                    </li>
+                    <li>
+                        Embedded controllers: Arduino, MSP430, STM32, Raspberry
+                        Pi
+                    </li>
                 </ul>
-                <h4 class="mb-4">Lighting</h4>
+                <h4 className="mb-4">Lighting</h4>
                 <ul>
-                    <li>Designed for companies such as A Theatre Near U and Paly Theatre</li>
-                    <li>Electrician for Theatreworks Silicon Valley, West Bay Opera, and others</li>
+                    <li>
+                        Designed for companies such as A Theatre Near U and Paly
+                        Theatre
+                    </li>
+                    <li>
+                        Electrician for Theatreworks Silicon Valley, West Bay
+                        Opera, and others
+                    </li>
                 </ul>
-                <h4 class="mb-4">Other</h4>
+                <h4 className="mb-4">Other</h4>
                 <ul>
-                    <li>Unhealthy addiction to keyboards
+                    <li>
+                        Unhealthy addiction to keyboards
                         <ul>
-                            <li>Current daily: Iris Rev3 with custom silent Outemu Ice 68g and GMK Oblivion v2</li>
+                            <li>
+                                Current daily: Iris Rev3 with custom silent
+                                Outemu Ice 68g and GMK Oblivion v2
+                            </li>
                         </ul>
                     </li>
-                    <li>(neo)vim >> emacs</li>
+                    <li>(neo)vim {">>"} emacs</li>
                     <li>Trains are cool. So are airplanes.</li>
                 </ul>
             </div>
@@ -38,6 +55,5 @@ const AboutPage = ({ data  }) => {
     )
 }
 
-
 AboutPage.Layout = Layout
-export default AboutPage;
+export default AboutPage

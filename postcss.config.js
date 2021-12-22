@@ -1,7 +1,4 @@
 module.exports = () => ({
-  plugins: [
-    require("tailwindcss"),
-    require("autoprefixer")
-],
-
+    // eslint-disable-next-line
+    plugins: [require("tailwindcss"), require("autoprefixer")],
 })

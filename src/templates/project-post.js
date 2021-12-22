@@ -1,45 +1,83 @@
 import React from "react"
-import Layout from "../components/layout"
+import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
+import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import "./project-post.css"
 
-const ProjectTemplate = ({data}) => {
+function ProjectTemplate({ data }) {
     const post = data.markdownRemark
     return (
         <>
-            <SEO title={post.frontmatter.title} image={post.frontmatter.featuredImage} description={post.frontmatter.tagline} article />
-            <div class="text-center mt-0 md:mt-16">
-                <h1 class="project-title font-bold mb-1">{post.frontmatter.title}</h1>
-                <h3 class="mb-2 project-tagline">{post.frontmatter.tagline}</h3>
-                <div class="flex flex-row items-center justify-center mb-12">
+            <SEO
+                title={post.frontmatter.title}
+                image={post.frontmatter.featuredImage}
+                description={post.frontmatter.tagline}
+                article
+            />
+            <div className="text-center mt-0 md:mt-16">
+                <h1 className="project-title font-bold mb-1">
+                    {post.frontmatter.title}
+                </h1>
+                <h3 className="mb-2 project-tagline">
+                    {post.frontmatter.tagline}
+                </h3>
+                <div className="flex flex-row items-center justify-center mb-12">
+                    {post.frontmatter.github && (
+                        <div className="mr-6">
+                            <a
+                                className="text-gray-900"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={post.frontmatter.github}
+                            >
+                                <i className="fab fa-github" /> Github Repo
+                            </a>
+                        </div>
+                    )}
 
-                    { post.frontmatter.github &&
-                        <div class="mr-6"><a class="text-gray-900" target="_blank" rel="noopener noreferrer" href={post.frontmatter.github}><i class="fab fa-github"></i> Github Repo</a></div>
-                    }
+                    {post.frontmatter.buildguide && (
+                        <div className="">
+                            <Link
+                                class="text-gray-900"
+                                to={post.frontmatter.buildguide}
+                            >
+                                <i className="fas fa-hammer" /> Build Guide
+                            </Link>
+                        </div>
+                    )}
 
-                    { post.frontmatter.buildguide &&
-                        <div class=""><Link class="text-gray-900" to={post.frontmatter.buildguide}><i class="fas fa-hammer"></i> Build Guide</Link></div>
-                    }
-
-                    { post.frontmatter.projectsite &&
-                        <div class=""><a class="text-gray-900" target="_blank" rel="noopener noreferrer" href={post.frontmatter.projectsite}><i class="fas fa-link"></i> {post.frontmatter.projectsitetype}</a></div>
-                    }
-
+                    {post.frontmatter.projectsite && (
+                        <div className="">
+                            <a
+                                className="text-gray-900"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={post.frontmatter.projectsite}
+                            >
+                                <i className="fas fa-link" />{" "}
+                                {post.frontmatter.projectsitetype}
+                            </a>
+                        </div>
+                    )}
                 </div>
             </div>
 
-            <div class="mb-8">
-                <div class="text-left flex flex-col justify-center content-center m-auto px-4 max-w-lg lg:max-w-screen-md project-post-contents" dangerouslySetInnerHTML={{ __html: post.html }} />
+            <div className="mb-8">
+                <div
+                    className="text-left flex flex-col justify-center content-center m-auto px-4 max-w-lg lg:max-w-screen-md project-post-contents"
+                    // eslint-disable-next-line react/no-danger
+                    dangerouslySetInnerHTML={{ __html: post.html }}
+                />
             </div>
         </>
     )
 }
 
 export const query = graphql`
-    query($slug: String!) {
-        markdownRemark(fields: { slug: {eq: $slug} }) {
+    query ($slug: String!) {
+        markdownRemark(fields: { slug: { eq: $slug } }) {
             html
             frontmatter {
                 title
@@ -59,5 +97,9 @@ export const query = graphql`
     }
 `
 
-ProjectTemplate.Layout = Layout;
-export default ProjectTemplate;
+ProjectTemplate.propTypes = {
+    data: PropTypes.node.isRequired,
+}
+
+ProjectTemplate.Layout = Layout
+export default ProjectTemplate
