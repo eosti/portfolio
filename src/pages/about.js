@@ -8,7 +8,7 @@ import './lighting.css'
 
 const AboutPage = ({ data  }) => {
     return (
-        <Layout>
+        <>
             <SEO title="About" />
             <div class="flex flex-col text-left align-center m-auto md:min-h-full mx-16 md:mx-32 md:h-screen mt-0 md:mt-16">
                 <div class="text-6xl font-thin pt-12 pb-8 pl-0 text-purple-600">About</div>
@@ -34,8 +34,10 @@ const AboutPage = ({ data  }) => {
                     <li>Trains are cool. So are airplanes.</li>
                 </ul>
             </div>
-        </Layout>
+        </>
     )
 }
 
+
+AboutPage.Layout = Layout
 export default AboutPage;

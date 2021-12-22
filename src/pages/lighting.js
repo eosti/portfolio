@@ -8,7 +8,7 @@ import './lighting.css'
 
 const LightingPage = ({ data }) => {
     return (
-        <Layout>
+        <>
             <SEO title="Lighting Design" />
             <div class="text-6xl font-thin pt-12 pb-2 pl-6 text-purple-600">Lighting Design</div>
             <div class="grid grid-cols-1 gap-4 px-4 my-4">
@@ -29,7 +29,7 @@ const LightingPage = ({ data }) => {
                     </div>
                 ))}
             </div>
-        </Layout>
+        </>
     );
 }
 
@@ -61,4 +61,5 @@ export const query = graphql`{
 }
 `
 
+LightingPage.Layout = Layout;
 export default LightingPage;

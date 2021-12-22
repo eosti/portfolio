@@ -8,7 +8,7 @@ import "./lighting-post.css"
 const LightingTemplate = ({data}) => {
     const post = data.markdownRemark
     return (
-        <Layout>
+        <>
             <SEO title={post.frontmatter.title} image={post.frontmatter.featuredImage} description={post.frontmatter.title + " by " + post.frontmatter.author + ", lighting design by Reid Sox-Harris"} article />
             <div class="mx-4 mt-0 md:mt-4">
                 <div class="show-info m-auto mb-6">
@@ -21,7 +21,7 @@ const LightingTemplate = ({data}) => {
                     <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 </div>
             </div>
-        </Layout>
+        </>
     )
 }
 
@@ -45,4 +45,5 @@ export const query = graphql`query ($slug: String!) {
 }
 `
 
+LightingTemplate.Layout = Layout;
 export default LightingTemplate;

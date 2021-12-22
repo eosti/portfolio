@@ -9,7 +9,7 @@ import "./index.css"
 
 const IndexPage = ({ data }) => {
     return (
-        <Layout>
+        <>
             <SEO title="Home" />
             <div class="flex flex-col justify-center items-center min-h-screen mb-4 md:mb-0">
                 <div class="mx-6 md:mx-0 md:pl-4 self-start">
@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </>
     );
 }
 
@@ -77,4 +77,6 @@ export const query = graphql`{
 }
 `
 
+
+IndexPage.Layout = Layout;
 export default IndexPage;

@@ -8,7 +8,7 @@ import './projects.css'
 
 const ProjectsPage = ({ data }) => {
     return (
-        <Layout>
+        <>
             <SEO title="Projects" />
             <div class="text-6xl font-thin pt-12 pb-2 pl-6 text-purple-600">Projects</div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 px-4 md:pr-6 my-4 md:my-4">
@@ -30,7 +30,7 @@ const ProjectsPage = ({ data }) => {
                     </div>
                 ))}
             </div>
-        </Layout>
+        </>
     );
 }
 
@@ -63,4 +63,5 @@ export const query = graphql`{
 }
 `
 
+ProjectsPage.Layout = Layout;
 export default ProjectsPage;
