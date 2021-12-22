@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
+// eslint-disable-next-line
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 import { getSrc } from "gatsby-plugin-image"
