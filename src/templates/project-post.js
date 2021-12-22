@@ -8,7 +8,7 @@ import "./project-post.css"
 const ProjectTemplate = ({data}) => {
     const post = data.markdownRemark
     return (
-        <Layout>
+        <>
             <SEO title={post.frontmatter.title} image={post.frontmatter.featuredImage} description={post.frontmatter.tagline} article />
             <div class="text-center mt-0 md:mt-16">
                 <h1 class="project-title font-bold mb-1">{post.frontmatter.title}</h1>
@@ -33,7 +33,7 @@ const ProjectTemplate = ({data}) => {
             <div class="mb-8">
                 <div class="text-left flex flex-col justify-center content-center m-auto px-4 max-w-lg lg:max-w-screen-md project-post-contents" dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>
-        </Layout>
+        </>
     )
 }
 
@@ -59,4 +59,5 @@ export const query = graphql`
     }
 `
 
+ProjectTemplate.Layout = Layout;
 export default ProjectTemplate;
