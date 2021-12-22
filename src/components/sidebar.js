@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image";
 
-export default ({ children }) => {
+const Sidebar = ({ children }) => {
     const data = useStaticQuery(
         graphql`
       query {
@@ -18,7 +18,7 @@ export default ({ children }) => {
     return (
         <aside class="flex items-center justify-center max-h-screen w-1/6">
             <nav class="flex flex-col justify-center items-start wrap-normal w-max">
-                <Link to="/" className="flex-auto w-max mb-8 mt-4">
+                <Link to="/" className="flex-auto w-max mb-8 mt-4 mr-4">
                     <StaticImage className="w-28" placeholder="tracedSVG" loading="eager" alt="Logo" src="../images/reid-logo.png" />
                 </Link>
                 <ul class="flex-auto list-none p-0 m-0 w-max">
@@ -52,3 +52,5 @@ export default ({ children }) => {
         </aside>
     )
 }
+
+export default Sidebar
