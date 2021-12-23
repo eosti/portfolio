@@ -33,6 +33,7 @@ function ProjectsPage({ data }) {
                                     style={{ height: "100%" }}
                                     imgStyle={{ objectPosition: "center" }}
                                     alt={node.frontmatter.title}
+                                    placeholder="blurred"
                                 />
                             </div>
                             <div className="relative inset-0 h-full w-full hover-hover:opacity-0 hover:opacity-75 hover-none:bg-opacity-60 duration-300 bg-white project-name flex flex-col items-center justify-center">
