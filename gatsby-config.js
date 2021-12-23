@@ -31,12 +31,6 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-postcss`,
-            options: {
-                postCssPlugins: [require('postcss-import'), require("tailwindcss"), require("autoprefixer")],
-            },
-        },
-        {
             resolve: `gatsby-plugin-nprogress`,
             options: {
                 color: `purple`,
@@ -46,9 +40,10 @@ module.exports = {
         {
             resolve: `gatsby-plugin-sitemap`,
             options: {
-                output: "/./"
+                output: "/./",
             },
         },
+        `gatsby-plugin-postcss`,
         `gatsby-plugin-robots-txt`,
         `gatsby-plugin-react-helmet`,
         `gatsby-transformer-sharp`,
@@ -58,8 +53,8 @@ module.exports = {
             options: {
                 defaults: {
                     placeholder: `blurred`,
-                }
-            }
+                },
+            },
         },
         {
             resolve: `gatsby-plugin-manifest`,
@@ -91,12 +86,12 @@ module.exports = {
                             maxWidth: 1800,
                             quality: 80,
                             linkImagesToOriginal: false,
-                            wrapperStyle: 'margin-bottom:5px;',
+                            wrapperStyle: "margin-bottom:5px;",
                             showCaptions: true,
                         },
                     },
                     {
-                        resolve:`gatsby-remark-external-links`,
+                        resolve: `gatsby-remark-external-links`,
                         options: {
                             target: "_blank",
                             rel: "noopener noreferrer",
@@ -104,7 +99,7 @@ module.exports = {
                     },
                     {
                         resolve: `gatsby-remark-prismjs`,
-                        options:{
+                        options: {
                             classPrefix: "language-",
                             inlineCodeMarker: null,
                             aliases: {},
@@ -116,15 +111,15 @@ module.exports = {
                                 global: false,
                             },
                             escapeEntities: {},
-                        }
-                    }
+                        },
+                    },
                 ],
             },
         },
         {
             resolve: `gatsby-plugin-html-attributes`,
             options: {
-                lang: 'en'
+                lang: "en",
             },
         },
         // this (optional) plugin enables Progressive Web App + Offline functionality

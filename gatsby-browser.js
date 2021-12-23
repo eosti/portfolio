@@ -1,6 +1,7 @@
-import React from "react"
+const React = require("react")
 
-export function wrapPageElement({ element, props }) {
-  const Layout = element.type.Layout ?? React.Fragment
-  return <Layout {...props}>{element}</Layout>
+exports.wrapPageElement = ({ element, props }) => {
+    const Layout = element.type.Layout ?? React.Fragment
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    return <Layout {...props}>{element}</Layout>
 }

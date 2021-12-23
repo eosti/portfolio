@@ -1,26 +1,38 @@
 {
     "env": {
         "browser": true,
-        "es6": true
+        "es2021": true,
+        "node": true
     },
     "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "airbnb",
+        "prettier"
     ],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
         },
-        "ecmaVersion": 11,
+        "ecmaVersion": 13,
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "prettier"
     ],
     "rules": {
+        "prettier/prettier": "warn",
+        "arrow-body-style": "off",
+        "prefer-arrow-callback": "off",
+        "no-unused-vars": [
+            "error",
+            {
+                "vars": "local",
+                "args": "none"
+            }
+        ],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/function-component-definition": [2, { "namedComponents": "function-declaration" }],
+        "no-use-before-define": ["error", { "variables": false }]
     }
 }

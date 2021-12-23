@@ -8,18 +8,19 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
+// eslint-disable-next-line
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 import { getSrc } from "gatsby-plugin-image"
 
-const SEO = ({ title, description, image, article }) => {
+function SEO({ title, description, image, article }) {
     const { pathname } = useLocation()
     const { site } = useStaticQuery(query)
 
     const {
         defaultTitle,
         titleTemplate,
-        defaultDescription, 
+        defaultDescription,
         siteUrl,
         defaultImage,
         twitterUsername,
@@ -36,19 +37,25 @@ const SEO = ({ title, description, image, article }) => {
         <Helmet title={seo.title} titleTemplate={titleTemplate}>
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
-            <meta http-equiv='content-language' content='en-us' />
+            <meta httpEquiv="content-language" content="en-us" />
 
             {seo.url && <link rel="canonical" href={seo.url} />}
             {seo.url && <meta property="og:url" content={seo.url} />}
-            {(article ? true : null) && <meta property="og:type" content="article" />}
+            {(article ? true : null) && (
+                <meta property="og:type" content="article" />
+            )}
             {seo.title && <meta property="og:title" content={seo.title} />}
-            {seo.description && <meta property="og:description" content={description} />}
+            {seo.description && (
+                <meta property="og:description" content={description} />
+            )}
             {seo.image && <meta property="og:image" content={seo.image} />}
 
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:creator" content={twitterUsername} />
             {seo.title && <meta name="twitter:title" content={seo.title} />}
-            {seo.description && <meta name="twitter:description" content={seo.description} />}
+            {seo.description && (
+                <meta name="twitter:description" content={seo.description} />
+            )}
             {seo.image && <meta name="twitter:image" content={seo.image} />}
         </Helmet>
     )
@@ -56,7 +63,6 @@ const SEO = ({ title, description, image, article }) => {
 
 SEO.defaultProps = {
     article: false,
-    title: null,
     image: null,
     description: null,
 }
