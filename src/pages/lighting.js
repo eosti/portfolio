@@ -30,6 +30,7 @@ function LightingPage({ data }) {
                                     style={{ height: "100%" }}
                                     imgStyle={{ objectPosition: "center" }}
                                     alt={node.frontmatter.title}
+                                    placeholder="blurred"
                                 />
                             </div>
                             <div className="h-full w-full left-0 top-0 relative hover:opacity-75 hover-hover:opacity-0 hover-none:bg-opacity-60 duration-300 bg-white show-name">
