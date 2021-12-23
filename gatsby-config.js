@@ -40,7 +40,6 @@ module.exports = {
         {
             resolve: `gatsby-plugin-sitemap`,
             options: {
-                output: "/./",
             },
         },
         `gatsby-plugin-postcss`,
@@ -48,6 +47,10 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
+        {
+            resolve: `gatsby-plugin-robots-txt`,
+            options: {},
+        },
         {
             resolve: `gatsby-plugin-image`,
             options: {
