@@ -33,7 +33,7 @@ class Hamburger extends React.Component {
     }
 
     render() {
-        const { hamburgerOpen } = this.state
+        const { menuOpen } = this.state
 
         return (
             <div className="flex-initial h-16">
@@ -47,7 +47,7 @@ class Hamburger extends React.Component {
                                 alt="Hamburger dropdown"
                             />
                         }
-                        isOpen={hamburgerOpen.menuOpen}
+                        isOpen={menuOpen}
                         onStateChange={(state) => this.handleStateChange(state)}
                     >
                         <Link
