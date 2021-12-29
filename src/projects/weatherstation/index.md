@@ -2,6 +2,7 @@
 title: weatherstation.local
 slug: projects/weatherstation
 tagline: Can I breathe yet?
+secondaryDesc: A weather monitoring station keeping residents safe from the California wildfires
 featuredImage: ./weatherstation-featured.jpg
 date: 2020-05
 github: https://github.com/eosti/weatherstation

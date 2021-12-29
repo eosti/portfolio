@@ -13,7 +13,7 @@ function ProjectTemplate({ data }) {
             <SEO
                 title={post.frontmatter.title}
                 image={post.frontmatter.featuredImage}
-                description={post.frontmatter.tagline}
+                description={`${post.frontmatter.tagline} | ${post.frontmatter.secondaryDesc}`}
                 article
             />
             <div className="text-center mt-0 md:mt-16">
@@ -83,6 +83,7 @@ export const query = graphql`
                 title
                 date(formatString: "YYYY")
                 tagline
+                secondaryDesc
                 github
                 buildguide
                 projectsite

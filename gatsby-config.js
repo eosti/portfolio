@@ -6,7 +6,7 @@ module.exports = {
         description: `Hi! I'm Reid Sox-Harris. I'm a lighting designer and a maker.`,
         siteUrl: "https://reidsoxharris.me",
         image: "/src/images/reid-logo.png",
-        twitterUsername: "@ReidSox",
+        twitterUsername: "@SoxReid",
     },
     plugins: [
         {

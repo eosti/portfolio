@@ -2,6 +2,7 @@
 title: Homelab
 slug: projects/homelab
 tagline: There's no place like 127.0.0.1
+secondaryDesc: Learning how the Internet works by building an enterprise-grade server stack, at home
 featuredImage: ./homelab-featured.jpg
 date: 2021-01
 ---
