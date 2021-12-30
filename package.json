@@ -27,6 +27,7 @@
     "gatsby-source-filesystem": "^4.4.0",
     "gatsby-transformer-remark": "^5.4.0",
     "gatsby-transformer-sharp": "^4.4.0",
+    "moment": "^2.29.1",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.2",
     "prismjs": "^1.25.0",

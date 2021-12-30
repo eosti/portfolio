@@ -15,6 +15,7 @@ function ProjectTemplate({ data }) {
                 image={post.frontmatter.featuredImage}
                 description={`${post.frontmatter.tagline} | ${post.frontmatter.secondaryDesc}`}
                 article
+                lastMod={post.fields.gitAuthorTime}
             />
             <div className="text-center mt-0 md:mt-16">
                 <h1 className="project-title font-bold mb-1">
@@ -93,6 +94,9 @@ export const query = graphql`
                         gatsbyImageData(quality: 100, layout: FULL_WIDTH)
                     }
                 }
+            }
+            fields {
+                gitAuthorTime
             }
         }
     }

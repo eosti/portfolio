@@ -12,6 +12,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
             value: slug,
         })
     }
+
+    // Gets last modified via git, from https://pragmaticpineapple.com/add-updated-at-to-your-gatsby-blog/
     if (node.internal.type === "MarkdownRemark") {
         const gitAuthorTime = execSync(
             `git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`

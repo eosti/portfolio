@@ -15,6 +15,7 @@ function LightingTemplate({ data }) {
                 image={post.frontmatter.featuredImage}
                 description={`${post.frontmatter.title} by ${post.frontmatter.author}, lighting design by Reid Sox-Harris`}
                 article
+                lastMod={post.fields.gitAuthorTime}
             />
             <div className="mx-4 mt-0 md:mt-4">
                 <div className="show-info m-auto mb-6">
@@ -55,6 +56,9 @@ export const query = graphql`
                         gatsbyImageData(quality: 100, layout: FULL_WIDTH)
                     }
                 }
+            }
+            fields {
+                gitAuthorTime
             }
         }
     }
