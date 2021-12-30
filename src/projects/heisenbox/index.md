@@ -2,6 +2,7 @@
 title: The Heisenbox
 slug: /projects/heisenbox
 tagline: Is it alive or dead?
+secondaryDesc: An interactive educational tool demonstrating the concepts of the Heisenberg Uncertainty Principle
 featuredImage: ./heisenbox-feature.jpg
 date: 2019-11
 github: https://github.com/eosti/heisenbox

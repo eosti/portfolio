@@ -2,6 +2,7 @@
 title: remote-stm32
 slug: projects/remote-stm32
 tagline: You can't escape
+secondaryDesc: A programming and debugging server that allows anyone, anywhere to prototype on an STM32
 featuredImage: ./stm32.jpg
 date: 2021-01
 github: https://github.com/eosti/remote-stm32

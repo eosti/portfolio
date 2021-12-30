@@ -13,8 +13,10 @@ function ProjectTemplate({ data }) {
             <SEO
                 title={post.frontmatter.title}
                 image={post.frontmatter.featuredImage}
-                description={post.frontmatter.tagline}
+                description={`${post.frontmatter.tagline} | ${post.frontmatter.secondaryDesc}`}
                 article
+                lastMod={post.fields.gitAuthorTime}
+                publishDate={post.frontmatter.date}
             />
             <div className="text-center mt-0 md:mt-16">
                 <h1 className="project-title font-bold mb-1">
@@ -81,8 +83,9 @@ export const query = graphql`
             html
             frontmatter {
                 title
-                date(formatString: "YYYY")
+                date
                 tagline
+                secondaryDesc
                 github
                 buildguide
                 projectsite
@@ -92,6 +95,9 @@ export const query = graphql`
                         gatsbyImageData(quality: 100, layout: FULL_WIDTH)
                     }
                 }
+            }
+            fields {
+                gitAuthorTime
             }
         }
     }

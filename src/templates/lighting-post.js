@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
+import Moment from "moment"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -8,6 +9,7 @@ import "./lighting-post.css"
 
 function LightingTemplate({ data }) {
     const post = data.markdownRemark
+    const dateYear = Moment(post.frontmatter.date).year()
     return (
         <>
             <SEO
@@ -15,6 +17,8 @@ function LightingTemplate({ data }) {
                 image={post.frontmatter.featuredImage}
                 description={`${post.frontmatter.title} by ${post.frontmatter.author}, lighting design by Reid Sox-Harris`}
                 article
+                lastMod={post.fields.gitAuthorTime}
+                publishDate={post.frontmatter.date}
             />
             <div className="mx-4 mt-0 md:mt-4">
                 <div className="show-info m-auto mb-6">
@@ -22,7 +26,7 @@ function LightingTemplate({ data }) {
                         <span className="show-name">
                             {post.frontmatter.title}
                         </span>
-                        , {post.frontmatter.date}
+                        , {dateYear}
                     </p>
                     <p>By {post.frontmatter.author}</p>
                     <p>Directed by {post.frontmatter.director}</p>
@@ -45,7 +49,7 @@ export const query = graphql`
             html
             frontmatter {
                 title
-                date(formatString: "YYYY")
+                date
                 director
                 author
                 company
@@ -55,6 +59,9 @@ export const query = graphql`
                         gatsbyImageData(quality: 100, layout: FULL_WIDTH)
                     }
                 }
+            }
+            fields {
+                gitAuthorTime
             }
         }
     }

@@ -12,8 +12,9 @@ import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 import { getSrc } from "gatsby-plugin-image"
+import Moment from "moment"
 
-function SEO({ title, description, image, article }) {
+function SEO({ title, description, image, article, publishDate, lastMod }) {
     const { pathname } = useLocation()
     const { site } = useStaticQuery(query)
 
@@ -31,6 +32,8 @@ function SEO({ title, description, image, article }) {
         description: description || defaultDescription,
         image: `${siteUrl}${getSrc(image) || defaultImage}`,
         url: `${siteUrl}${pathname}`,
+        lastMod: Moment(lastMod).format(),
+        publishDate: Moment(publishDate).format(),
     }
 
     return (
@@ -44,11 +47,32 @@ function SEO({ title, description, image, article }) {
             {(article ? true : null) && (
                 <meta property="og:type" content="article" />
             )}
+            {(article ? true : null) && (
+                <meta
+                    property="og:author"
+                    name="author"
+                    content="Reid Sox-Harris"
+                />
+            )}
             {seo.title && <meta property="og:title" content={seo.title} />}
             {seo.description && (
                 <meta property="og:description" content={description} />
             )}
             {seo.image && <meta property="og:image" content={seo.image} />}
+            {seo.lastMod && (
+                <meta
+                    property="og:lastmod"
+                    name="lastmod"
+                    content={seo.lastMod}
+                />
+            )}
+            {seo.publishDate && (
+                <meta
+                    property="og:publish_date"
+                    name="publish_date"
+                    content={seo.publishDate}
+                />
+            )}
 
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:creator" content={twitterUsername} />
@@ -65,6 +89,8 @@ SEO.defaultProps = {
     article: false,
     image: null,
     description: null,
+    lastMod: null,
+    publishDate: null,
 }
 
 SEO.propTypes = {
@@ -72,6 +98,8 @@ SEO.propTypes = {
     title: PropTypes.string.isRequired,
     image: PropTypes.string,
     article: PropTypes.bool,
+    lastMod: PropTypes.string,
+    publishDate: PropTypes.string,
 }
 
 const query = graphql`

@@ -6,7 +6,7 @@ module.exports = {
         description: `Hi! I'm Reid Sox-Harris. I'm a lighting designer and a maker.`,
         siteUrl: "https://reidsoxharris.me",
         image: "/src/images/reid-logo.png",
-        twitterUsername: "@ReidSox",
+        twitterUsername: "@SoxReid",
     },
     plugins: [
         {
@@ -59,6 +59,7 @@ module.exports = {
                         },
                         fields {
                             slug
+                            gitAuthorTime
                         }
                         }
                     }
@@ -73,6 +74,7 @@ module.exports = {
                     allPosts.map((post) => {
                         pathToDateMap[post.fields.slug] = {
                             date: post.frontmatter.date,
+                            lastModGit: post.fields.gitAuthorTime,
                         }
                     })
 
@@ -82,7 +84,7 @@ module.exports = {
 
                     return pages
                 },
-                serialize: ({ path, date }) => {
+                serialize: ({ path, date, lastModGit }) => {
                     const entry = {
                         url: path,
                         changefreq: "daily",
@@ -91,7 +93,7 @@ module.exports = {
 
                     if (date) {
                         entry.priority = 0.7
-                        entry.lastmod = date
+                        entry.lastmod = lastModGit
                     }
 
                     return entry

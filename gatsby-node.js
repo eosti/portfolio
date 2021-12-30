@@ -1,5 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const { execSync } = require(`child_process`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions
@@ -9,6 +10,18 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
             node,
             name: `slug`,
             value: slug,
+        })
+    }
+
+    // Gets last modified via git, from https://pragmaticpineapple.com/add-updated-at-to-your-gatsby-blog/
+    if (node.internal.type === "MarkdownRemark") {
+        const gitAuthorTime = execSync(
+            `git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`
+        ).toString()
+        actions.createNodeField({
+            node,
+            name: "gitAuthorTime",
+            value: gitAuthorTime,
         })
     }
 }
