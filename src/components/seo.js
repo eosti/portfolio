@@ -41,8 +41,16 @@ function SEO({ title, description, image, article }) {
 
             {seo.url && <link rel="canonical" href={seo.url} />}
             {seo.url && <meta property="og:url" content={seo.url} />}
-            {(article ? true : null) && <meta property="og:type" content="article" />}
-            {(article ? true : null) && <meta property="og:author" content="Reid Sox-Harris" />}
+            {(article ? true : null) && (
+                <meta property="og:type" content="article" />
+            )}
+            {(article ? true : null) && (
+                <meta
+                    property="og:author"
+                    name="author"
+                    content="Reid Sox-Harris"
+                />
+            )}
             {seo.title && <meta property="og:title" content={seo.title} />}
             {seo.description && (
                 <meta property="og:description" content={description} />
