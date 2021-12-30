@@ -14,7 +14,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { getSrc } from "gatsby-plugin-image"
 import Moment from "moment"
 
-function SEO({ title, description, image, article, lastMod }) {
+function SEO({ title, description, image, article, publishDate, lastMod }) {
     const { pathname } = useLocation()
     const { site } = useStaticQuery(query)
 
@@ -33,6 +33,7 @@ function SEO({ title, description, image, article, lastMod }) {
         image: `${siteUrl}${getSrc(image) || defaultImage}`,
         url: `${siteUrl}${pathname}`,
         lastMod: Moment(lastMod).format(),
+        publishDate: Moment(publishDate).format(),
     }
 
     return (
@@ -59,7 +60,18 @@ function SEO({ title, description, image, article, lastMod }) {
             )}
             {seo.image && <meta property="og:image" content={seo.image} />}
             {seo.lastMod && (
-                <meta property="og:lastmod" content={seo.lastMod} />
+                <meta
+                    property="og:lastmod"
+                    name="lastmod"
+                    content={seo.lastMod}
+                />
+            )}
+            {seo.publishDate && (
+                <meta
+                    property="og:publish_date"
+                    name="publish_date"
+                    content={seo.publishDate}
+                />
             )}
 
             <meta name="twitter:card" content="summary_large_image" />
@@ -78,6 +90,7 @@ SEO.defaultProps = {
     image: null,
     description: null,
     lastMod: null,
+    publishDate: null,
 }
 
 SEO.propTypes = {
@@ -86,6 +99,7 @@ SEO.propTypes = {
     image: PropTypes.string,
     article: PropTypes.bool,
     lastMod: PropTypes.string,
+    publishDate: PropTypes.string,
 }
 
 const query = graphql`
