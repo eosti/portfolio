@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 function Sidebar() {
     return (
         <aside className="flex items-center justify-center max-h-screen w-1/6">
-            <nav className="flex flex-col justify-center items-start wrap-normal w-max">
+            <nav className="flex flex-col justify-center items-start wrap-normal w-max fixed">
                 <Link to="/" className="flex-auto w-max mb-8 mt-4 mr-4">
                     <StaticImage
                         className="w-28"
