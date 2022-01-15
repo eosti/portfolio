@@ -20,7 +20,7 @@ function LightingTemplate({ data }) {
                 lastMod={post.fields.gitAuthorTime}
                 publishDate={post.frontmatter.date}
             />
-            <div className="mx-4 mt-0 md:mt-4">
+            <div className="mx-4 mt-0 lg:mt-4">
                 <div className="show-info m-auto mb-6">
                     <p>
                         <span className="show-name">

@@ -11,10 +11,10 @@ function ProjectsPage({ data }) {
     return (
         <>
             <SEO title="Projects" />
-            <div className="text-6xl font-thin pt-12 pb-2 pl-6 text-purple-600">
+            <div className="text-6xl font-thin pt-4 lg:pt-12 pb-2 pl-6 text-purple-600">
                 Projects
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 px-4 md:pr-6 my-4 md:my-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 px-4 lg:pr-6 my-4 lg:my-4">
                 {data.allMarkdownRemark.edges.map(({ node }) => (
                     <div
                         key={node.id}
