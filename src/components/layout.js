@@ -12,8 +12,8 @@ function Layout({ children }) {
     return (
         <>
             <Header />
-            <div className="min-h-screen flex flex-col md:flex-row">
-                <Media queries={{ desktop: { maxWidth: 768 } }}>
+            <div className="min-h-screen flex flex-col lg:flex-row">
+                <Media queries={{ desktop: { maxWidth: 1024 } }}>
                     {(matches) =>
                         matches.desktop ? <Hamburger /> : <Sidebar />
                     }

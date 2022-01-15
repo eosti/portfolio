@@ -6,8 +6,8 @@ function AboutPage() {
     return (
         <>
             <SEO title="About" />
-            <div className="flex flex-col text-left align-center m-auto md:min-h-full mx-16 md:mx-32 md:h-screen mt-0 md:mt-16">
-                <div className="text-6xl font-thin pt-12 pb-8 pl-0 text-purple-600">
+            <div className="flex flex-col text-left align-center m-auto lg:min-h-full mx-16 lg:mx-32 lg:h-screen mt-0 lg:mt-16">
+                <div className="text-6xl font-thin pt-4 lg:pt-12 pb-8 pl-0 text-purple-600">
                     About
                 </div>
                 <h4 className="mb-4">Electronics</h4>

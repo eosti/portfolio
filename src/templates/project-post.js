@@ -18,7 +18,7 @@ function ProjectTemplate({ data }) {
                 lastMod={post.fields.gitAuthorTime}
                 publishDate={post.frontmatter.date}
             />
-            <div className="text-center mt-0 md:mt-16">
+            <div className="text-center mt-0 lg:mt-16">
                 <h1 className="project-title font-bold mb-1">
                     {post.frontmatter.title}
                 </h1>
@@ -68,7 +68,7 @@ function ProjectTemplate({ data }) {
 
             <div className="mb-8">
                 <div
-                    className="text-left flex flex-col justify-center content-center m-auto px-4 max-w-lg lg:max-w-screen-md project-post-contents"
+                    className="text-left flex flex-col justify-center content-center m-auto px-4 max-w-lg lg:max-w-screen-lg project-post-contents"
                     // eslint-disable-next-line react/no-danger
                     dangerouslySetInnerHTML={{ __html: post.html }}
                 />
