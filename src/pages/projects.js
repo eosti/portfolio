@@ -5,8 +5,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import "./projects.css"
-
 function ProjectsPage({ data }) {
     return (
         <>
@@ -16,10 +14,7 @@ function ProjectsPage({ data }) {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 px-4 lg:pr-6 my-4 lg:my-4">
                 {data.allMarkdownRemark.edges.map(({ node }) => (
-                    <div
-                        key={node.id}
-                        className="project-box h-full overflow-hidden"
-                    >
+                    <div key={node.id} className="overflow-hidden h-[40vh]">
                         <Link
                             className="no-underline h-full relative"
                             to={node.fields.slug}
@@ -36,11 +31,11 @@ function ProjectsPage({ data }) {
                                     placeholder="blurred"
                                 />
                             </div>
-                            <div className="relative inset-0 h-full w-full hover-hover:opacity-0 hover:opacity-75 hover-none:bg-opacity-60 duration-300 bg-white project-name flex flex-col items-center justify-center">
-                                <h1 className="project-title px-2 text-gray-800 whitespace-normal text-center hover-none:opacity-95 w-full">
+                            <div className="relative inset-0 h-full w-full hover-hover:opacity-0 hover:opacity-75 hover-none:bg-opacity-60 duration-300 bg-white top-[-40vh] flex flex-col items-center justify-center">
+                                <h1 className="text-[300%] font-extrabold px-2 text-gray-800 whitespace-normal text-center hover-none:opacity-95 w-full">
                                     {node.frontmatter.title}
                                 </h1>
-                                <h3 className="project-tagline px-4 text-gray-800 whitespace-normal text-center hover-none:opacity-90 w-full">
+                                <h3 className="text-[150%] font-extrabold px-4 text-gray-800 whitespace-normal text-center hover-none:opacity-90 w-full">
                                     {node.frontmatter.tagline}
                                 </h3>
                             </div>
