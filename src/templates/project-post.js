@@ -22,7 +22,7 @@ function ProjectTemplate({ data }) {
                 <h1 className="project-title font-bold mb-1">
                     {post.frontmatter.title}
                 </h1>
-                <h3 className="mb-2 project-tagline">
+                <h3 className="mb-2 project-tagline font-light">
                     {post.frontmatter.tagline}
                 </h3>
                 <div className="flex flex-row items-center justify-center mb-12">
