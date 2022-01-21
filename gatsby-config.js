@@ -146,9 +146,9 @@ module.exports = {
                         options: {
                             maxWidth: 1800,
                             quality: 80,
-                            linkImagesToOriginal: false,
                             wrapperStyle: "margin-bottom:5px;",
                             showCaptions: true,
+                            disableBgImageOnAlpha: true
                         },
                     },
                     {
