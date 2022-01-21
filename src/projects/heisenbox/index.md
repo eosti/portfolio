@@ -34,7 +34,7 @@ I'm blaming the yellow on the short time frame to get this done.
 Side note, the handle that I used is actually the cheapest one that you can get from Home Depot (at least at the time). 
 Given that, I'm surprised by how nice it looks. 
 
-![Glam shot of Heisenbox](./heisenbox-glam.jpg) "Look at that handle. So enticing."
+![Glam shot of Heisenbox](./heisenbox-glam.jpg "Look at that handle. So enticing.")
 
 The code is up on Github [here](https://github.com/eosti/heisenbox). 
 There are TM1637 drivers there that work with MSP430s, derived from an ATtiny library that's linked there too. 
