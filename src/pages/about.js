@@ -23,7 +23,7 @@ function AboutPage() {
                         <h4 className="mb-4 w-full">Electronics</h4>
                         <ul>
                             <li>
-                                Second-year electrical engineer at University of
+                                Third-year electrical engineer at University of
                                 Toronto
                             </li>
                             <li>
