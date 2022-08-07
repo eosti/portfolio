@@ -82,6 +82,9 @@ export const query = graphql`
         }
         allMarkdownRemark(
             sort: { fields: [frontmatter___date], order: DESC }
+            filter: {
+                frontmatter: { featuredImage: { absolutePath: { ne: null } } }
+            }
             limit: 4
         ) {
             edges {
