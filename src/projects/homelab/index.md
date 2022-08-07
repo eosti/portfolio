@@ -4,7 +4,7 @@ slug: projects/homelab
 tagline: There's no place like 127.0.0.1
 secondaryDesc: Learning how the Internet works by building an enterprise-grade server stack, at home
 featuredImage: ./homelab-featured.jpg
-date: 2021-01
+date: 2022-04
 ---
 
 I've always believed that the best way to learn how to do something is by just throwing yourself into it and doing it yourself.
@@ -18,63 +18,72 @@ Not that I've ever done that, of course.
 
 Was the ISP-provided router *probably* enough?
 Yes.
-Is it way more fun to have a fully-fledged wired network with multiple WAPs?
+Is it way more fun to have a fully-fledged segmented wired network with multiple WAPs?
 Oh yeah. 
 
-![Network map](network-diagram.png)
+![Network map](HomeNetworkDiagram.png)
 
 I went with Ubiquiti gear for this network since they offer inexpensive commercial-grade equipment in many shapes and sizes.
-Originally, I was using old Cisco and Dell switches, but after I came to terms with the fact that no, I'll never need 48 PoE ports and full L3 routing, I simplified and condensed to compact routers and switches from Ubiquiti.
+Originally, I was using old Cisco and Dell switches, but after I came to terms with the fact that no, I'll never need 48 PoE ports and full L3 switching, I simplified and condensed to compact routers and switches from Ubiquiti.
 The power bill thanked me for this move; that Cisco switch was guzzling over 100W even at idle. 
 
 While I was refactoring the network, I decided that I really needed a bunch of VLANS.
 I don't actually think that they're necessary here, nor make my network more secure or less busy; I really only added them for the fun of it, to see what I could do with them.
 
-There are four VLANS: management, wired devices, wireless devices, and IoT. 
+There are four VLANs: management, wired devices, wireless devices, and IoT. 
 The IoT VLAN is completely isolated except for a few holes to allow for MQTT and Sonos devices to talk to the server.
 The rest just segregate the network nicely, and for the most part, are transparent to whatever I'm working on. 
 
 [Pi-hole](https://pi-hole.net/) is used as a network-wide adblocker and local DNS service. 
 The ER-X gently suggests via DHCP and firewall rules that devices should use Pi-hole as their main DNS, so most devices connected to the network have some level of ad blocking.
+There is one physical Pi (the OG Model B) as a backup, but I have the main instance virtualised on my main server.
 
 The [Ripe Atlas](https://atlas.ripe.net/) is a tiny little device that RIPE NCC uses to make worldwide network measurements. 
-Besides being an easy way to contribute to the health of Internet, it also acts as a canary, since the NCC will send you an email when the probe, and therefore your internet, goes down.
+Besides being an easy way to contribute to the health of Internet, it also acts as a canary.
+The NCC will send you an email when the probe, and therefore your internet, goes down.
+There's usually not much you can actually do when the internet goes down except from get put on hold by your ISP, but it's still nice to know. 
 You can apply to get one for free on their [site](https://atlas.ripe.net/get-involved/become-a-host/).
 
-## lithium-server.lan ##
+## fluorine-server ##
 
-The pièce de résistance of the entire network, a 2009 Mac Mini that was underpowered even when it was brand new. 
-Perfect for a headless install of Ubuntu Server and a handful of applications, though!
+![Server service map](fluorine-server.png)
 
-![Server service map](server-diagram.png)
+Virtualise all the things!
+Instead of running my services on bare metal, I wanted to play around with VMs and hypervisors a bit, so I installed [Proxmox VE](https://www.proxmox.com/en/proxmox-ve). 
+There are four main VMs: one for PiHole, one for a Wireguard VPN server, one for Docker, and one for TrueNAS. 
+All of them are running Ubuntu 20.04 LTS, except for [TrueNAS](https://www.truenas.com/) which is an OS specifically for managing drives in a NAS. 
 
-[Docker](https://www.docker.com/) (and specifically [docker-compose](https://docs.docker.com/compose/)) manages most of the services, resulting in easy configuration, management, updating, etc.
-All user data is stored off of the container and backed up using [BorgBackup](https://www.borgbackup.org/), meaning that very little actually needs to be backed up, as the containers are disposable.
+The physical host is a Dell PowerEdge R240 that I got for quite a nice price, and can handle my rather light demands with ease. 
+I have an Intel datacenter-grade SSD for VM storage, and a pair of 4TB drives in RAID1 that TrueNAS handles for mass storage. 
 
-The [Unifi Controller](https://hub.docker.com/r/linuxserver/unifi-controller) keeps an eye on the WAPs and allows for quick and easy configuration.
-Unfortunately, the routing and switching gear is (mostly) Edge-line equipment, so this only manages the wireless side. 
-The router and the switch can only be configured via their own web-based GUI or CLI.
+While I have dedicated VMs for a few services, I use [Docker](https://www.docker.com/) (and specifically [docker-compose](https://docs.docker.com/compose/)) for managing most of the smaller services, resulting in easy configuration, management, updating, etc.
+By storing all the configuration and user data outside of the container, I can easily back up and restore all containers via [BorgBackup](https://www.borgbackup.org/).
 
-[HomeAssistant](https://www.home-assistant.io/) is used for a few smarthome-type things.
-The main automation is to have my WiZ smartlights change color temperature though the day using [adaptive-lighting](https://github.com/basnijholt/adaptive-lighting).
-[Mosquitto](https://hub.docker.com/_/eclipse-mosquitto) is my MQTT broker of choice, communicating with a smart switch and my [weatherstation](../weatherstation/).
+All of the sensor data from Home Assistant and my [weatherstation](../weatherstation) gets stored temporarily in a [MariaDB](https://mariadb.org/) instance, but for long term storage, I have a [InfluxDB](https://www.influxdata.com/) container as a single source for all data logging I can think of. 
+To make everything more palatable, I use [Grafana](https://grafana.com/) to visualize the data, along with data from [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/). 
 
-I use [JellyFin](https://jellyfin.org/) for the occasional video streaming need, and [node-sonos-http-api](https://github.com/jishi/node-sonos-http-api) for the backend to my [Sonos remote](https://github.com/eosti/sonos-remote).
+Finally, I am using [Traefik](https://traefik.io/traefik/) to tie it all together though a reverse proxy.
+Everything is secured through [Authentik](https://goauthentik.io/), an all-in-one identity provider. 
 
-Finally, I am using [Traefik](https://traefik.io/traefik/) to tie it all together though a remote proxy.
-Originally I could just remember the port numbers for each service, but that gets hard once you have more than a few services all at once.
-Many hours of pain and suffering later, each frequently used service has a sub-domain that is much easier to use.
-Theoretically, Traefik is essentially plug-and-play, but HomeAssistant and Unifi both have some networking and encryption requirements that confuse Traefik, so it took a while to get all sorted out.
+Initial setup and large-scale management is provided by [Ansible](https://www.ansible.com/) and a number of playbooks that I've developed in the process of bringing this all up. 
+Why do things manually when you can spend three times as long to automate it?
 
-## The latest and the Greatest ##
+## Networking, Part 2 ##
 
-Well, not really. 
+But wait, there's more!
 
-I recently got my hands on a few G11 PowerEdge servers and have been setting up a development environment so that I don't have to test everything on live. 
-They're old (~2010) and all together draw 750W *at idle* but fantastic for learning virtualization and other server infrastructure. 
+As I bounce around the continent during university, I want a reliable connection back to my main server. 
+Wherever else I reside, I use a tiny little Dell 7050 Micro as a portable server. 
+Once again running Proxmox, it offers similar services as fluorine-server, such as Home Assistant and PiHole. 
 
-It's all still a huge work in process, but the current state is a 3-host [proxmox](https://www.proxmox.com/en/) cluster with various VMs running in High Availability mode. 
-I've also been toying with [TrueNAS](https://www.truenas.com/) and ZFS, and working with the Cisco CLI to ensure fast, reliable networking. 
-Finally, nearly all actions that I complete manually I make sure to go back and automate with [Ansible](https://www.ansible.com/) so that I can be properly lazy. 
+However, it also has a VM running [OPNSense](https://opnsense.org/), a fully-featured firewall and routing service. 
+Using WireGuard, I create a VPN tunnel between sites, so I can access fluorine-server and all other devices as if they were right next to me on the other side of the continent. 
+I wrote up a guide on how to do this [here](opnsense-wireguard-tun), since it involved some more complex routing and configuration than I was expecting.
 
-Having a homelab is great for tinkering around with networking and server management, and it's been fantastic for learning about everything that goes into our Internet. 
+This means that I can upload Home Assistant data back to the single InfluxDB instance on fluorine-server, but still keep all essential services local in case, say, [Rogers' entire network goes down](https://blog.cloudflare.com/cloudflares-view-of-the-rogers-communications-outage-in-canada/).
+I can also use this VPN tunnel to access my desktop computer while I'm out of the house, letting me use the power of a desktop computer for CAD or computation tasks while remote on a laptop. 
+
+I can safely say that many aspects of my homelab are way overkill, and I'm making far more work for myself than it's worth. 
+There are many services (VPN, Home Assistant, etc) that have potentially much simpler solutions, but they might be cloud-based, closed-source, or just plain worse than the self-hosted alternative. 
+Besides, I've learned so much about how servers and the internet work, as well as picking up many tips and tricks along the way that I've been able to apply outside of a homelab environment. 
+To me, that alone is worth it, and the useful services that come along with that are just a nice bonus.
