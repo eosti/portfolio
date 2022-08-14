@@ -8,7 +8,7 @@ company: PALY Theatre
 location: Palo Alto High School (Palo Alto, CA)
 ---
 
-![](./AlmostMaine_081.jpg)
+![](./AlmostMaine_022.jpg)
 ![](./AlmostMaine_022.jpg)
 ![](./AlmostMaine_030.jpg)
 ![](./AlmostMaine_059.jpg)
