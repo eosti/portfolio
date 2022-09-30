@@ -148,7 +148,7 @@ module.exports = {
                             quality: 80,
                             wrapperStyle: "margin-bottom:5px;",
                             showCaptions: true,
-                            disableBgImageOnAlpha: true
+                            disableBgImageOnAlpha: true,
                         },
                     },
                     {
@@ -174,6 +174,7 @@ module.exports = {
                             escapeEntities: {},
                         },
                     },
+                    `gatsby-remark-smartypants`,
                 ],
             },
         },
