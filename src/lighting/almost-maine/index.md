@@ -9,7 +9,7 @@ location: Palo Alto High School (Palo Alto, CA)
 ---
 
 ![](./AlmostMaine_022.jpg)
-![](./AlmostMaine_022.jpg)
+![](./AlmostMaine_081.jpg)
 ![](./AlmostMaine_030.jpg)
 ![](./AlmostMaine_059.jpg)
 ![](./AlmostMaine_098.jpg)
