@@ -106,10 +106,6 @@ module.exports = {
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {
-            resolve: `gatsby-plugin-robots-txt`,
-            options: {},
-        },
-        {
             resolve: `gatsby-plugin-image`,
             options: {
                 defaults: {
