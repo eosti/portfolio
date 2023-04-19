@@ -9,6 +9,10 @@
         "airbnb",
         "prettier"
     ],
+    "ignorePatterns": [
+        "public/*",
+        "node_modules/*"
+    ],
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
