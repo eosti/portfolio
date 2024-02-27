@@ -45,7 +45,10 @@ export const query = graphql`
     {
         allMarkdownRemark(
             sort: { fields: [frontmatter___date], order: DESC }
-            filter: { fileAbsolutePath: { regex: "/(lighting)/" } }
+            filter: {
+                fileAbsolutePath: { regex: "/(lighting)/" }
+                frontmatter: { archive: { ne: true } }
+            }
         ) {
             totalCount
             edges {

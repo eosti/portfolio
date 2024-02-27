@@ -6,6 +6,7 @@ secondaryDesc: A programming and debugging server that allows anyone, anywhere t
 featuredImage: ./stm32.jpg
 date: 2021-01
 github: https://github.com/eosti/remote-stm32
+noFrontPage: true
 ---
 
 Ever wish you could program your STM32-based project anywhere, at any time?

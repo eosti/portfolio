@@ -8,6 +8,7 @@ date: 2020-05
 github: https://github.com/eosti/weatherstation
 projectsite: https://io.adafruit.com/eosti/dashboards/outside-weather
 projectsitetype: Adafruit IO
+noFrontPage: true
 ---
 
 Living in California, we must face a fire season every year that keeps getting worse. While I am in no danger of getting torched thankfully, the air quality always takes a significant dip around this time of year.

@@ -7,6 +7,7 @@ director: Lauren Sweet
 author: Dennis Kelly
 company: Sunnyvale Community Players
 location: Sunnyvale Community Theatre (Sunnyvale, CA)
+archive: true
 ---
 
 ![](./mat-1.jpg)

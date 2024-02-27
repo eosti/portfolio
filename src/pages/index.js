@@ -83,7 +83,11 @@ export const query = graphql`
         allMarkdownRemark(
             sort: { fields: [frontmatter___date], order: DESC }
             filter: {
-                frontmatter: { featuredImage: { absolutePath: { ne: null } } }
+                frontmatter: {
+                    featuredImage: { absolutePath: { ne: null } }
+                    archive: { ne: true }
+                    noFrontPage: { ne: true }
+                }
             }
             limit: 4
         ) {
