@@ -34,11 +34,19 @@ function LightingTemplate({ data }) {
                             {post.frontmatter.codesigner}
                         </p>
                     )}
-                    <p>By {post.frontmatter.author}</p>
+                    {post.frontmatter.author && (
+                        <p>By {post.frontmatter.author}</p>
+                    )}
                     <p>Directed by {post.frontmatter.director}</p>
-                    <p>
-                        {post.frontmatter.company}, {post.frontmatter.location}
-                    </p>
+                    {post.frontmatter.company ?
+                        <p>{post.frontmatter.company}, {post.frontmatter.location}</p>
+                        : <p>{post.frontmatter.location}</p>
+                    }
+                    {post.frontmatter.photocredit && (
+                        <p>
+                            Photos by {post.frontmatter.photocredit}
+                        </p>
+                    )}
                 </div>
                 <div className="lighting-post-contents">
                     {/* eslint-disable-next-line react/no-danger */}
@@ -61,6 +69,7 @@ export const query = graphql`
                 author
                 company
                 location
+                photocredit
                 featuredImage {
                     childImageSharp {
                         gatsbyImageData(quality: 100, layout: FULL_WIDTH)
