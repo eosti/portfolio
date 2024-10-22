@@ -14,7 +14,7 @@ _Also, still a bit under construction. More plots and better descriptions to com
 I do a [fair bit](../../lighting) of theatrical lighting, where color is a significant part of any design. 
 You say "blue", I say "R60? L201? G925? AP4870?"
 There's shades upon shades of every color imaginable, all 
-Similar to the Pantone colors (begrudgingly?) embraced by graphic and product designers, lighting designers have been working with Rosco, GAM, Lee, and Apollo (RIP) colors for decades. 
+Similar to the Pantone colors (begrudgingly?) embraced by graphic and product designers, lighting designers have been working with Rosco, GAM, Lee, and Apollo (RIP) colors for decades[^1]. 
 Each company will sell you any color you need (provided it comes from their two-inch thick swatchbook) in the form of a "gel", or a plastic filter designed to go in front of a tungsten light, removing any unwanted wavelengths to get that perfect shade of [Skelton Exotic Sangria](https://us.rosco.com/en/products/filters/r39-skelton-exotic-sangria) you were after. 
 
 On the plus side, seemingly unlimited choice of high-quality, consistent color. 
@@ -36,71 +36,84 @@ What's not to love?
 # The Problem
 ## Gamut
 One issue with using RGB is simply that it's unable to create the rich variety of colors that a tungsten light + gels could produce. 
-This can pretty easily be seen by looking at a standard RGB color gamut (i.e. what colors it can produce)
+This can pretty easily be seen by looking at a standard RGB color gamut (i.e. what colors it can produce):
 
-![CIE1931 spectra with RGB gamut](cie1931.png)
+![CIE1931 spectra with various RGB gamuts](cie1931.png)
 
 Everything inside the triangle is mixable with some combination of R, G, and B (for you linear algebra folks, I believe this would be a basis). 
 But everything outside is not reachable -- LEDs don't have negative intensity. 
-This is deeply unfortunate for theatrical lighting designers, who *love* their saturated colors: you can't get any more "blue" than your blue LED, so a lot of lovely blues, indigos, and purples are simply out of reach. 
-Maybe fine for concert lighting where there's a bit less subtle color design going on, but still a drag either way. 
+This is deeply unfortunate for theatrical lighting designers, who *love* their saturated colors: you can't get any more "blue" than your blue LED, so a lot of lovely blues, indigos, and purples are out of reach. 
+Maybe acceptable for concert lighting where there's a bit less subtle color design going on, but still a drag either way. 
 
-While annoying, this isn't actually the biggest issue...
+But while annoying, this isn't actually the biggest issue...
 
-## Metamerism
-## How Eyes Work
-Rods and cones! 
-Rods sense color, so they're all we care about here. 
-
-## How Light Works
+## How Light Interacts With Our Eyes
 A given surface, whether that's the skin of an actor, the paint on the set, or a mote of dust, will have a certain spectral reflectance which describes how much of any given wavelength will be reflected from it. 
+For example, a typical red apple will have much more reflectance in the red wavelengths than the blue[^2]:
 
-![Reflectance of a branch of an Aspen tree](aspenWb.png)
+![Reflectance of an apple](apple.png)
 
-In a similar vein, sources of light have a certain output spectra, which describes the output relative power any given wavelength:
+In a similar vein, sources of light have a certain output spectra, which describes the output relative power any given wavelength.
+The sun has a pretty flat spectra, so it looks white. 
+Unfortunately, it's pretty hard to capture the sun and put it in a room, so we model the sun's output using the D65 standard illuminant:
 
 ![Spectra of the sun (using the D65 standard illuminant)](d65.png)
 
-These two spectra are combined to get the resulting "color" spectra that our eyes will see:
+These two spectra are combined to get the resulting spectra that will bounce off of the apple into our eyes:
 
-![Resulting spectra of aspen lit by the sun]
+![Resulting spectra of apple lit by the sun](appleInSun.png)
 
-The resultant spectra is recieved by the rods in the eye, which come in three types: long, medium, and short (sometimes inaccurately referred to as red, green, and blue rods), which have their own response curve that is applied to the incoming light:
+The eye contains rods and cone which are generally responsible for color vision and night vision respectively. 
+There are three kinds of cones, short, medium, and long, each being stimulated by a different range of wavelengths[^3].
+The amount of stimulus received by each rod is processed by the brain, and you get color! 
 
-![rod spectra]
-
-Finally, the amount of stimulus received by each rod is processed by the brain, and you get color! 
 Now, here's the catch. 
-This example relied on a relatively wideband source of light (the sun), which means that the resulting spectra after reflecting off of the apple is pretty faithful to the Aspen's true color. 
+This example relied on a relatively wideband source of light (the sun), which means that the resulting spectra after reflecting off of the apple is pretty faithful to the apple's true color. 
+Sure, the red rolling off as wavelength increases isn't quite what the actual apple does, but it's close enough. 
 But what if we try illuminating it with the narrowband light that comes from an LED?
 
-![example again](three_led.png)
+LEDs are naturally narrowband due to the physics of electrons interacting with the semiconductor band gap[^4].
+Most RGB LEDs will use three individual LEDs in one package, typically somewhere around 475nm, 540nm, and 610nm:
 
-Now, what the eye sees is pretty distorted relative to what the real color from the apple is. 
-Will it still look red, yes, but will it also have a weird tinge to it that our eyes will pick up pretty quickly, also yes. 
-Therein lies the primary problem of using RGB in theatre: it simply does not look good reflected off of things. 
+![Spectra of a standard RGB LED](led3.png)
+
+Now, let's do what we did before and combine the spectra of the RGB LED with the reflectance of the apple and see what happens: 
+
+![Resulting spectra of apple lit by RGB LED](appleInLED.png)
+
+Ew. 
+That's definitely a red thing, but aside from that, we've lost a lot of the data about what this thing is. 
+You'll be able to figure it out from the shape of the apple, and the tastiness, but the color is much less meaningful than before. 
+
+Therein lies the primary problem of using RGB in theatre: it simply does not look good reflected off of things[^5]. 
 It makes actors look sick, changes the color of scenic pieces, and overall makes a performance less pleasant to watch. 
-
-#### Aside: how do screens do it?
-Easy: don't reflect off of anything. 
-Screens emit light that is directly recieved by the eye, no reflecting with confusing objects in between. 
-We use RGB to cover a fairly wide gamut of what the eye can see without needing many different types of LEDs. 
-Neat!
 
 # The Solution
 Moar LEDs!
-More LEDs gives a smoother gamut, better representative of what a tungsten source with filters might output. 
+The RGB is problematic because each LED is too narrowband and too far apart, resulting in that spiky luminance plot seen before. 
+Thankfully, LEDs come in all shapes and sizes, so how about adding a few more LEDs?
+
+If you want to just add one more LED, a lime LED is the move. 
+The reasoning behind this is rather interesting, and instead of explaining it myself, you should go check out [Tucker Down's explaination](https://web.archive.org/web/20221130214607/https://tuckerd.info/01/why-lime/), since he has a PhD in this stuff and I most certainly do not. 
+Of course, this isn't perfect, so you can keep adding LEDs to get that smooth spectra to better represent what a tungsten source with gels would output.
 For example, ETC's new top-of-the-line LED fixtures [uses 8 LEDs](https://www.etcconnect.com/Products/Entertainment-Fixtures/Source-Four-LED-Series-3/Features.aspx) including an exciting new deep red for better skin tones. 
 
-It's with that in mind that I designed this board: I wanted to demonstrate all the different ways LEDs could work together to create light, and how our eyes play tricks on us all the time!
+It's with all that in mind that I designed this board: I wanted to demonstrate all the different ways LEDs could work together to create light, and how our eyes play tricks on us all the time!
 
 ![All 16 LEDs of possibilities!](lit-board.jpg)
 
-### Footnote
-Just like [Pantone pulled colors from Adobe](https://www.theverge.com/2022/11/1/23434305/adobe-pantone-subscription-announcement-photoshop-illustrator), [Rosco has pulled colors from Eos](https://www.controlbooth.com/threads/rosco-files-suit-against-etc.49859/), the predominant lighting control software for theatre. 
-They [eventually settled](https://www.etcconnect.com/About/News/Rosco-and-ETC-find-common-ground.aspx), but there was a weird year or two where all Rosco colors were referred to as "Common Color" in Eos. 
+# Sources and Further Reading
+The plots were generated with the fantastic [Colour Python package](https://www.colour-science.org/). 
+The dataset used for the apple spectra came from the [SpectroFood dataset](https://zenodo.org/records/8362947). 
 
-### Spectra Sources
-Lumber Specta: https://zenodo.org/records/3269924
+I found the textbooks *Principles of Color Technology* by Roy Berns and *The Lighting Handbook* by the Illuminating Engineering Society very very helpful in learning all these concepts. 
 
-D65 and trichromacy: https://www.colour-science.org/
+Of course, I am not a color scientist, so everything on this page is a best-effort explanation. 
+If you do happen to by a color scientist and spot something wrong, please shoot me an email (and even if you don't spot something wrong, I'd still love to talk). 
+
+## Footnotes
+[^1]: Just like [Pantone pulled colors from Adobe](https://www.theverge.com/2022/11/1/23434305/adobe-pantone-subscription-announcement-photoshop-illustrator), [Rosco has pulled colors from Eos](https://www.controlbooth.com/threads/rosco-files-suit-against-etc.49859/), the predominant lighting control software for theatre. They [eventually settled](https://www.etcconnect.com/About/News/Rosco-and-ETC-find-common-ground.aspx), but there was a weird year or two where all Rosco colors were referred to as "Common Color" in Eos. 
+[^2]: What's with the black portions of the spectral plots? Our human eyes will respond to all of the wavelengths shown in this plot, but your screen can't display them! Why? Perhaps you should re-read the Gamut section one more time. This makes documenting this project rather annoying because I want to show off this 505nm LED that I found that makes a lovely shade of teal... But I can't, because a photo can't represent that color!
+[^3]: The rods are commonly referred to by the spectrum that they're responsible for: long, medium, and short map to red, green, and blue. This is a misconception: it would be more appropriate to refer to them as yellow-green, green, and blue, as the long and medium cones overlap A LOT! And besides, they respond to a range of frequencies, it's just that yellow-green/green/blue is where they have their peak sensitivity. Anyway, how do we see red if we don't have a red cone? The brain finds the difference between the long and medium cones and is able to map that difference to the presence of red. Bodies are crazy y'all. 
+[^4]: You may ask: well how do white LEDs work? These are actually pretty wideband, but that's due to using a phosphor. You take a blue LED, put a phosphor over it (typically Ce:YAG) which will fluoresce. The blue from the LED and the yellow from the phosphor combine to make white! This can result in very good, accurate white light, typically characterized by the Color Rendition Index (CRI).
+[^5]: Key word being *reflected*. Monitors and screens look great because they're not reflecting off of anything, and have a direct path into your rods. But ever seen someone only illuminated by their screen? They look awful!
