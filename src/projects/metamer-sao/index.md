@@ -120,6 +120,24 @@ All of which are individually controllable over its I2C bus for infinite[^7] mix
 I'm very happy with the board design from a electrical-design perspective, for which I will again encourage checking out the [Hackaday project page](https://hackaday.io/project/198439-metamer-sao) where instead of talking way too much about colors, I talk way too much  about any-angle PCB routing and low-cost PCB design techniques. 
 Come find me at a conference and get one of your very own!
 
+# Wait, What's a Metamer?
+
+Oh yeah, I've kinda diverged from that. 
+Metamerism is a result of how our eyes process light: as long as the three types of rod are stimulated in the same way, our brain will see the same color. 
+An example of this is the screen that you're reading this on right now! 
+It's outputing red, green, and blue to mix together and see white. 
+You look at the screen and see white, even though as we've been discussing, it's actually three narowband spectra. 
+
+Now go outside and look at the sun (please don't actually do this), also white! 
+The sun is very wideband, the opposite of LEDs
+So what gives, why do these two whites look the same?
+
+Since our eyes only have three axes of sensitivity (trichromacy), one for each rod, we can't tell between a complex wideband spectra like the sun and a simple narrowband spectra like LEDs. 
+In this case, the RGB white and the sun white happen to stimulate the rods in the same way, so to our eyes, they are identical. 
+After it reflects off of an object, though, that's what the rest of this page is about. 
+
+So: a metamer is two distinct spectra of light that appear the same to our eyes due to the limit of trichromacy.
+
 # Sources and Further Reading
 The plots were generated with the fantastic [Colour Python package](https://www.colour-science.org/). 
 The dataset used for the apple spectra came from the [SpectroFood dataset](https://zenodo.org/records/8362947). 
