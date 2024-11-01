@@ -15,10 +15,10 @@ function AboutPage() {
                         <div className="pb-8 w-full">
                             Hey! I&apos;m an electrical engineering student with
                             plenty of curiosity and a love of learning. I&apos;m
-                            currently the lead Electrical Designer with the University of
-                            Toronto Aerospace Team, and have a long list of side
-                            projects that I&apos;m persuing. Here&apos;s a bit
-                            more about me:
+                            currently the lead Electrical Designer with the
+                            University of Toronto Aerospace Team, and have a
+                            long list of side projects that I&apos;m persuing.
+                            Here&apos;s a bit more about me:
                         </div>
                         <h4 className="mb-4 w-full">Electronics</h4>
                         <ul>
