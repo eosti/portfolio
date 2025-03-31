@@ -73,38 +73,49 @@ function IndexPage({ data }) {
     )
 }
 
-export const query = graphql`{
-  site {
-    siteMetadata {
-      portfolioName
-    }
-  }
-  allMarkdownRemark(
-    sort: {frontmatter: {date: DESC}}
-    filter: {frontmatter: {featuredImage: {absolutePath: {ne: null}}, archive: {ne: true}, noFrontPage: {ne: true}}}
-    limit: 4
-  ) {
-    edges {
-      node {
-        id
-        frontmatter {
-          title
-          date(formatString: "MM YYYY")
-          tagline
-          featuredImage {
-            childImageSharp {
-              gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+export const query = graphql`
+    {
+        site {
+            siteMetadata {
+                portfolioName
             }
-          }
         }
-        fields {
-          slug
+        allMarkdownRemark(
+            sort: { frontmatter: { date: DESC } }
+            filter: {
+                frontmatter: {
+                    featuredImage: { absolutePath: { ne: null } }
+                    archive: { ne: true }
+                    noFrontPage: { ne: true }
+                }
+            }
+            limit: 4
+        ) {
+            edges {
+                node {
+                    id
+                    frontmatter {
+                        title
+                        date(formatString: "MM YYYY")
+                        tagline
+                        featuredImage {
+                            childImageSharp {
+                                gatsbyImageData(
+                                    quality: 100
+                                    layout: FULL_WIDTH
+                                )
+                            }
+                        }
+                    }
+                    fields {
+                        slug
+                    }
+                    excerpt
+                }
+            }
         }
-        excerpt
-      }
     }
-  }
-}`
+`
 
 IndexPage.propTypes = {
     data: PropTypes.node.isRequired,

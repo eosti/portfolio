@@ -16,7 +16,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     // Gets last modified via git, from https://pragmaticpineapple.com/add-updated-at-to-your-gatsby-blog/
     if (node.internal.type === "MarkdownRemark") {
         const gitAuthorTime = execSync(
-            `git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`
+            `git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`,
         ).toString()
         actions.createNodeField({
             node,
@@ -60,7 +60,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const projectsResult = await graphql(`
         query {
             allMarkdownRemark(
-                filter: { fileAbsolutePath: { regex: "/(src\/projects)/" } }
+                filter: { fileAbsolutePath: { regex: "/(src/projects)/" } }
             ) {
                 edges {
                     node {

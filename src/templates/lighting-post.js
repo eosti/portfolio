@@ -38,14 +38,16 @@ function LightingTemplate({ data }) {
                         <p>By {post.frontmatter.author}</p>
                     )}
                     <p>Directed by {post.frontmatter.director}</p>
-                    {post.frontmatter.company ?
-                        <p>{post.frontmatter.company}, {post.frontmatter.location}</p>
-                        : <p>{post.frontmatter.location}</p>
-                    }
-                    {post.frontmatter.photocredit && (
+                    {post.frontmatter.company ? (
                         <p>
-                            Photos by {post.frontmatter.photocredit}
+                            {post.frontmatter.company},{" "}
+                            {post.frontmatter.location}
                         </p>
+                    ) : (
+                        <p>{post.frontmatter.location}</p>
+                    )}
+                    {post.frontmatter.photocredit && (
+                        <p>Photos by {post.frontmatter.photocredit}</p>
                     )}
                 </div>
                 <div className="lighting-post-contents">

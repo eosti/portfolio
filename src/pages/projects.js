@@ -47,34 +47,41 @@ function ProjectsPage({ data }) {
     )
 }
 
-export const query = graphql`{
-  allMarkdownRemark(
-    sort: {frontmatter: {date: DESC}}
-    filter: { fileAbsolutePath: {regex: "/(src\/projects)/"}, frontmatter: {featuredImage: {absolutePath: {ne: null}}}
-    }
-  ) {
-    totalCount
-    edges {
-      node {
-        id
-        frontmatter {
-          title
-          tagline
-          date(formatString: "YYYY")
-          featuredImage {
-            childImageSharp {
-              gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+export const query = graphql`
+    {
+        allMarkdownRemark(
+            sort: { frontmatter: { date: DESC } }
+            filter: {
+                fileAbsolutePath: { regex: "/(src/projects)/" }
+                frontmatter: { featuredImage: { absolutePath: { ne: null } } }
             }
-          }
+        ) {
+            totalCount
+            edges {
+                node {
+                    id
+                    frontmatter {
+                        title
+                        tagline
+                        date(formatString: "YYYY")
+                        featuredImage {
+                            childImageSharp {
+                                gatsbyImageData(
+                                    quality: 100
+                                    layout: FULL_WIDTH
+                                )
+                            }
+                        }
+                    }
+                    fields {
+                        slug
+                    }
+                    excerpt
+                }
+            }
         }
-        fields {
-          slug
-        }
-        excerpt
-      }
     }
-  }
-}`
+`
 
 ProjectsPage.propTypes = {
     data: PropTypes.node.isRequired,
