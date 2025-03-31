@@ -25,3 +25,17 @@ colour.plotting.plot_single_sd(led_spectra.normalise(), filename="appleInLED.png
 
 # Gamut
 colour.plotting.plot_RGB_chromaticities_in_chromaticity_diagram_CIE1931((255, 255, 255), colourspaces=["ITU-R BT.2020", "ITU-R BT.709", "sRGB"], filename="cie1931.png", **plotting_kwargs)
+
+# Blackbody
+blackbody_sds = [
+    colour.sd_blackbody(i, colour.SpectralShape(400, 770, 10))
+    for i in range(1000, 6000, 1000)
+]
+colour.plotting.plot_multi_sds(
+    blackbody_sds,
+    y_label="W / (sr m$^2$) / m",
+    plot_kwargs={"use_sd_colours": False, "normalise_sd_colours": True},
+    legend_location="upper right",
+    filename="blackbody-visible",
+    **plotting_kwargs
+)
