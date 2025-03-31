@@ -41,40 +41,32 @@ function LightingPage({ data }) {
     )
 }
 
-export const query = graphql`
-    {
-        allMarkdownRemark(
-            sort: { fields: [frontmatter___date], order: DESC }
-            filter: {
-                fileAbsolutePath: { regex: "/(lighting)/" }
-                frontmatter: { archive: { ne: true } }
+export const query = graphql`{
+  allMarkdownRemark(
+    sort: {frontmatter: {date: DESC}}
+    filter: {fileAbsolutePath: {regex: "/(lighting)/"}, frontmatter: {archive: {ne: true}}}
+  ) {
+    totalCount
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          date(formatString: "DD MMMM, YYYY")
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(quality: 100, layout: FULL_WIDTH)
             }
-        ) {
-            totalCount
-            edges {
-                node {
-                    id
-                    frontmatter {
-                        title
-                        date(formatString: "DD MMMM, YYYY")
-                        featuredImage {
-                            childImageSharp {
-                                gatsbyImageData(
-                                    quality: 100
-                                    layout: FULL_WIDTH
-                                )
-                            }
-                        }
-                    }
-                    fields {
-                        slug
-                    }
-                    excerpt
-                }
-            }
+          }
         }
+        fields {
+          slug
+        }
+        excerpt
+      }
     }
-`
+  }
+}`
 
 LightingPage.propTypes = {
     data: PropTypes.node.isRequired,
