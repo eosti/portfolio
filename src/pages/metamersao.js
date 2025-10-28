@@ -36,6 +36,14 @@ function MetamerPage() {
                             >
                                 &nbsp;my portfolio page about it
                             </a>
+                            &nbsp;and
+                            <a
+                                href="/beyondRGB"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                &nbsp;my talk about it
+                            </a>
                             .
                         </div>
                         <div className="pb-4 w-full">
@@ -63,6 +71,18 @@ function MetamerPage() {
                             it also has the PY32 code running on the bootstrap
                             I2C MCU, schematics, and other tools I used in the
                             implementation of this fun little SAO.
+                        </div>
+                        <div className="pb-4 w-full">
+                            There&apos;s a few versions out in the wild: if you
+                            have a green Metamer SAO, you have v1, if you have a
+                            white one without a version number on the back then
+                            you have v2.0 (Hackaday 2024), and if you have a
+                            white one with a version number on the back (top of
+                            the horseshoe) then you can figure it out from
+                            there. Version 2.1 is a minor improvement on v2.0
+                            that removes the efuse and adds an analog switch
+                            that allows for I2C bus isolation during
+                            bootstrapping.
                         </div>
                         <div className="pb-4 w-full">
                             I hope you enjoy the Metamer SAO, and of course

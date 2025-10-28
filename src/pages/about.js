@@ -13,22 +13,20 @@ function AboutPage() {
                     </div>
                     <div className="w-full">
                         <div className="pb-8 w-full">
-                            Hey! I&apos;m an electrical engineering student with
-                            plenty of curiosity and a love of learning. I&apos;m
-                            currently the lead Electrical Designer with the
-                            University of Toronto Aerospace Team, and have a
-                            long list of side projects that I&apos;m persuing.
+                            Hey! I&apos;m an electrical designer with
+                            plenty of curiosity and a love of learning. I
+                            currently work at Kepler Communications, designing 
+                            avionics and building satellites. 
                             Here&apos;s a bit more about me:
                         </div>
                         <h4 className="mb-4 w-full">Electronics</h4>
                         <ul>
                             <li>
-                                Fourth-year electrical engineer at University of
-                                Toronto
+                                University of Toronto graduate (BASc in Electrical Engineering, High Honours)
                             </li>
                             <li>
                                 Programming Experience: C/C++, Python, bash,
-                                git, Verilog HDL, MATLAB
+                                git, or whatever is needed to make it work
                             </li>
                             <li>
                                 Embedded controllers: Arduino, MSP430, STM32,
@@ -38,8 +36,7 @@ function AboutPage() {
                         <h4 className="mb-4 w-full">Lighting</h4>
                         <ul>
                             <li>
-                                Designed for companies such as A Theatre Near U
-                                and Paly Theatre
+                                Designer of numerous shows in both the San Francisco Bay Area and Toronto
                             </li>
                             <li>
                                 Electrician for Theatreworks Silicon Valley,
