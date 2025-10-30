@@ -28,16 +28,21 @@ function LightingTemplate({ data }) {
                         </span>
                         , {dateYear}
                     </p>
+                    {post.frontmatter.author && (
+                        <p>By {post.frontmatter.author}</p>
+                    )}
+                    <p>Directed by {post.frontmatter.director}</p>
                     {post.frontmatter.codesigner && (
                         <p>
                             Lighting Design by Reid Sox-Harris and{" "}
                             {post.frontmatter.codesigner}
                         </p>
                     )}
-                    {post.frontmatter.author && (
-                        <p>By {post.frontmatter.author}</p>
+                    {post.frontmatter.associate && (
+                        <p>
+                            Lighting Design by Reid Sox-Harris, Associate: {post.frontmatter.associate}
+                        </p>
                     )}
-                    <p>Directed by {post.frontmatter.director}</p>
                     {post.frontmatter.company ? (
                         <p>
                             {post.frontmatter.company},{" "}
@@ -68,6 +73,7 @@ export const query = graphql`
                 date
                 director
                 codesigner
+                associate
                 author
                 company
                 location
