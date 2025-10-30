@@ -73,6 +73,16 @@ function MetamerPage() {
                             implementation of this fun little SAO.
                         </div>
                         <div className="pb-4 w-full">
+                            If you think you&apos;re missing an LED or that one
+                            fell off: fear not, it was probably DNPed! The 496nm
+                            LED (left side, middle, 0603 package) is
+                            intentionally DNPed on most boards because the cost
+                            of that LED alone would nearly eclipse the cost of
+                            the rest of the BOM combined. If you want to have a
+                            completed board, look for a Rohm SMLD12E3N1WT86,
+                            available from your favourite supplier.
+                        </div>
+                        <div className="pb-4 w-full">
                             There&apos;s a few versions out in the wild: if you
                             have a green Metamer SAO, you have v1, if you have a
                             white one without a version number on the back then

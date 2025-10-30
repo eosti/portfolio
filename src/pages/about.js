@@ -13,16 +13,17 @@ function AboutPage() {
                     </div>
                     <div className="w-full">
                         <div className="pb-8 w-full">
-                            Hey! I&apos;m an electrical designer with
-                            plenty of curiosity and a love of learning. I
-                            currently work at Kepler Communications, designing 
-                            avionics and building satellites. 
-                            Here&apos;s a bit more about me:
+                            Hey! I&apos;m an electrical designer with plenty of
+                            curiosity and a love of learning. I currently work
+                            at Kepler Communications, designing avionics and
+                            building satellites. Here&apos;s a bit more about
+                            me:
                         </div>
                         <h4 className="mb-4 w-full">Electronics</h4>
                         <ul>
                             <li>
-                                University of Toronto graduate (BASc in Electrical Engineering, High Honours)
+                                University of Toronto graduate (BASc in
+                                Electrical Engineering, High Honours)
                             </li>
                             <li>
                                 Programming Experience: C/C++, Python, bash,
@@ -36,7 +37,8 @@ function AboutPage() {
                         <h4 className="mb-4 w-full">Lighting</h4>
                         <ul>
                             <li>
-                                Designer of numerous shows in both the San Francisco Bay Area and Toronto
+                                Designer of numerous shows in both the San
+                                Francisco Bay Area and Toronto
                             </li>
                             <li>
                                 Electrician for Theatreworks Silicon Valley,
