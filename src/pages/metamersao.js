@@ -74,13 +74,17 @@ function MetamerPage() {
                         </div>
                         <div className="pb-4 w-full">
                             If you think you&apos;re missing an LED or that one
-                            fell off: fear not, it was probably DNPed! The 496nm
-                            LED (left side, middle, 0603 package) is
-                            intentionally DNPed on most boards because the cost
-                            of that LED alone would nearly eclipse the cost of
-                            the rest of the BOM combined. If you want to have a
-                            completed board, look for a Rohm SMLD12E3N1WT86,
-                            available from your favourite supplier.
+                            fell off: fear not, it was probably DNPed! One of
+                            the two teal 0603 LEDs are usually intentionally
+                            DNPed to save on BOM costs since the cost of each of
+                            those LEDs rivals the cost of the rest of the BOM!
+                            It&apos;s a really unique LED for the size and color
+                            so only Rohm makes it, and I guess it doesn&apos;t
+                            sell well enough to bring it to normal LED prices.
+                            If you want to fully complete your board, the upper
+                            505nm LED is the Rohm SMLD12E2N1WT86, and the lower
+                            496nm LED is the Rohm SMLD12E3N1WT86, both available
+                            from your favourite supplier.
                         </div>
                         <div className="pb-4 w-full">
                             There&apos;s a few versions out in the wild: if you
@@ -92,7 +96,8 @@ function MetamerPage() {
                             there. Version 2.1 is a minor improvement on v2.0
                             that removes the efuse and adds an analog switch
                             that allows for I2C bus isolation during
-                            bootstrapping.
+                            bootstrapping. This also brings the project fully
+                            into KiCAD!
                         </div>
                         <div className="pb-4 w-full">
                             I hope you enjoy the Metamer SAO, and of course
