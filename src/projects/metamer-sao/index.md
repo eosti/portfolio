@@ -13,6 +13,8 @@ projectsitetype: Hackaday
 _Note: this page contains the color science and application bits of this design. For the technical build log, check out the [hackaday.io project page](https://hackaday.io/project/198439-metamer-sao)_. 
 _Also, still a bit under construction. More plots and better descriptions to come soon._
 
+_Also also, I did [a talk at Hackaday SuperCon 2025](https://www.youtube.com/watch?v=Fxpq7daVGzI) about this! Slides and stuff are over [here](../../beyondrgb)._
+
 # Motivation
 I do a [fair bit](../../lighting) of theatrical lighting, where color is a significant part of any design. 
 You say "blue", I say "R60? L201? G925? AP4870?"
