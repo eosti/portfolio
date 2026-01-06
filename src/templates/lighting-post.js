@@ -40,7 +40,8 @@ function LightingTemplate({ data }) {
                     )}
                     {post.frontmatter.associate && (
                         <p>
-                            Lighting Design by Reid Sox-Harris, Associate: {post.frontmatter.associate}
+                            Lighting Design by Reid Sox-Harris, Associate:{" "}
+                            {post.frontmatter.associate}
                         </p>
                     )}
                     {post.frontmatter.company ? (

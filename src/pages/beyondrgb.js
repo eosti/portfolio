@@ -22,6 +22,15 @@ function BeyondRGBPage() {
                             >
                                 Google Drive
                             </a>
+                            . In case you missed the talk, Hackaday has a
+                            recording on&nbsp;
+                            <a
+                                href="https://www.youtube.com/watch?v=Fxpq7daVGzI"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                YouTube
+                            </a>
                             .
                         </div>
                         <div className="pb-4 w-full">
