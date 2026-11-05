@@ -1,0 +1,4 @@
+[[redirects]]
+    from: "https://reidsoxharris.com/*"
+    to: "https://reidsoxharris.me/:splat"
+    status: 302
