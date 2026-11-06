@@ -1,5 +1,5 @@
 ---
-title: 'Fire and Frost: Prometheus, Pandora, and The Birth of Humankind'
+title: "Fire and Frost: Prometheus, Pandora, and The Birth of Humankind"
 associate: Alex Oresti
 featuredImage: FeaturedImage.jpg
 date: 2025-05

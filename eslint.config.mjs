@@ -20,6 +20,10 @@ export default [
     },
     ...compat.extends("plugin:react/recommended", "airbnb", "prettier"),
     {
+        settings: {
+            react: { version: "19" },
+        },
+
         plugins: {
             react,
             prettier,
