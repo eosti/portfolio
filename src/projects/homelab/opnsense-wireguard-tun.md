@@ -4,8 +4,8 @@ slug: projects/homelab/opnsense-wireguard-tun
 date: 2022-07
 ---
 
-# TODO! #
+# TODO!
 
-# Background #
+# Background
 
-# OPNSense Configuration #
+# OPNSense Configuration

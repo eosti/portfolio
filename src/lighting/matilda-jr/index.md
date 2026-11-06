@@ -1,5 +1,5 @@
 ---
-title: Matilda Jr. 
+title: Matilda Jr.
 codesigner: Ben McAuliffe
 featuredImage: header.jpg
 date: 2022-08
