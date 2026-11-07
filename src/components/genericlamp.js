@@ -34,11 +34,14 @@ function GenericLamp() {
                 >
                     &nbsp;Alec from Technology Connections&apos;
                 </a>
-                &nbsp;dismay, the lamps are single-spectrum colored filaments so
-                you don&apos;t get quite the nostoligc glow from years past. The
-                filaments are 28mm, rigid filaments. Due to some logistical
+                &nbsp;pleasure, some of the filaments appear to be
+                phosphor-based, so the red and green colors have a nice
+                nostolgic glow from years past. The blue and purple are the
+                harsh single-frequency color that would make Alec cringe though.
+                The filaments are 28mm, rigid filaments. Due to some logistical
                 issues, all I have for Supercon 2026 is red, green, blue,
-                purple, and warm white, but you can get a bunch of other colors.
+                purple, and warm white, but you can get a bunch of other colors
+                from the interwebz.
             </div>
             <div className="pb-4 w-full">
                 The design files (including schematics) are up{" "}
