@@ -24,6 +24,17 @@ function GenericLamp() {
                 assert GPIO1, then the output will be the sum of your PWM and
                 the 555&apos;s PWM.
             </div>
+            <div className="pb-4 w-full">
+                If you try this and it does not work, first verify that
+                you&apos;re driving the GPIO at all (hint, make sure to set the
+                GPIO to an output first), and then come find me to get a
+                replacement. I soldered these using old solder paste and it
+                caused a fair bit of bridging between the fine-pitch pins of the
+                dual NPN package, something that I didn&apos;t detect until too
+                late because I ran out of time to do QC testing. Oops. Careful
+                visual inspection and properly applied heat and suction is
+                usually enough to fix it.
+            </div>
             <h2 className="w-full ">Design Notes</h2>
             <div className="pb-4 w-full">
                 Much to
